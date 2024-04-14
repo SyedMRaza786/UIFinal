@@ -2,9 +2,66 @@
 
 {% block content %}
 
+<!-- basic page info. -->
+{{lesson.title}}<br>
 
-<b>Learn</b>
-{{lesson}}
+{%if "Self Check" in lesson.title %}
+{% include "checkbox.html" %}
+{%else%}
+{{lesson.body}}<br>
+{%endif%}
+
+
+{% if lesson.image %}
+<img src="{{ lesson.image }}" alt="main image">
+{%endif%}
+
+ <!-- Loop through flashcards -->
+ {% for flashcard in lesson.flashcards %}
+ <div>
+    <p>{{ flashcard.title }}</p>
+     <img src="{{ flashcard.image_url }}" alt="Flashcard Image">
+     <p>{{ flashcard.text }}</p>
+ </div>
+{% endfor %}
+
+<!-- Loop through audio clips -->
+{% for audio_clip in lesson.audio_clips %}
+<div>
+    <p>{{ audio_clip.text }}</p>
+    <audio controls>
+        <source src="{{ audio_clip.sound_url }}" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+  
+</div>
+{% endfor %}
+
+<!-- Loop through word bank -->
+{% for audio_clip in lesson.audio_clips %}
+<div>
+    <p>{{ audio_clip.word }}</p>
+</div>
+{% endfor %}
+
+ <!-- Loop through images -->
+ {% for tool in lesson.tools %}
+ <div>
+     <img src="{{ tool.image_url }}" alt="Tool Image">
+ </div>
+{% endfor %}
+
+
+<!-- previous and next buttons -->
+{% if lesson.prev_lesson | int != 0 %}
+    <a href="/learn/{{lesson.prev_lesson}}"><button>Prev</button></a>
+{%endif%}
+
+{% if lesson.next_lesson == "end" %}
+    <a href="/quiz/1"><button>Next</button></a>
+{% else %}
+    <a href="/learn/{{lesson.next_lesson}}"><button>Next</button></a>
+{%endif%}
 
 {% endblock %}
 

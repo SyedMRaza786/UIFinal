@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkbox for Each Sentence</title>
+</head>
+<body>
+    <form action="/learn/{{ lesson.lesson_id }}" method="post">
+        <input type="hidden" name="lesson_id" value="{{ lesson.lesson_id }}">
+        {% for sentence in lesson.body.split('\n') %}
+            <label>
+                {{ sentence.strip() }}
+                <input type="checkbox" name="sentence" value="{{ sentence.strip() }}">
+            </label>
+            <br>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
