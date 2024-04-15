@@ -1,19 +1,15 @@
-from flask import Flask
+from flask import Flask, session,redirect, url_for
 from flask import render_template
 from flask import Response, request, jsonify
 app = Flask(__name__)
+app.secret_key = 'your_secret_key'
+import json
+import datetime
 
 
-lessons = {
-   "1":{
-        "lesson_id": 1,
-        "title": "lesson 1"
-    },
-    "2":{
-        "lesson_id": 2,
-        "title": "lesson 2"
-    }
-}
+# import lessons
+with open('lessons.json') as f:
+    lessons = json.load(f)
 
 quiz_questions = {
    "1":{
@@ -33,10 +29,39 @@ def home():
    return render_template('home.html')   
 
 
-@app.route('/learn/<lesson_id>')
+@app.route('/learn/<lesson_id>', methods=['GET', 'POST'])
 def learn(lesson_id):
+    # Get the current timestamp and record it in the session for GET requests
+    current_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    lessons_list = session.setdefault('lessons', [])
+    # Update the timestamp for the existing lesson_id or append a new entry if it doesn't exist
+    lesson_index = next((i for i, lesson in enumerate(lessons_list) if lesson['lesson_id'] == lesson_id), None)
+    if lesson_index is not None:
+        # Update the timestamp if the lesson_id already exists
+        lessons_list[lesson_index]['timestamp'] = current_time
+    else:
+        # Append a new entry if the lesson_id doesn't exist
+        lessons_list.append({'lesson_id': lesson_id, 'timestamp': current_time})
+    session['lessons'] = lessons_list
+    
+    if request.method == 'POST':
+        # Process the form data if it's a POST request
+        form_lesson_id = request.form.get('lesson_id')
+        
+        if form_lesson_id == lesson_id:
+            selected_sentences = request.form.getlist('sentence')
+            # Update the session with the list of selected sentences for the current lesson
+            session.setdefault('lesson_selections', {})[lesson_id] = {
+                'timestamp': current_time,
+                'selected_sentences': selected_sentences
+            }
+        
+        # Redirect back to the same page after processing the form
+        return redirect(url_for('learn', lesson_id=lesson_id))
+    
+    # Render the learn.html template for GET requests
     lesson = lessons[lesson_id]
-    return render_template('learn.html', lesson = lesson) 
+    return render_template('learn.html', lesson=lesson)
 
 @app.route('/quiz/<quiz_id>')
 def quiz(quiz_id):
@@ -44,6 +69,18 @@ def quiz(quiz_id):
     return render_template('quiz.html', question = question) 
 
 
+# store user's choices in session
+@app.route('/view_session')
+def view_session():
+    print(session)
+    return redirect(url_for('home')) 
+
+@app.route('/clear_session')
+def clear_session():
+    # Clear the session
+    session.clear()
+    # Redirect to a different route or page after clearing the session
+    return redirect(url_for('home')) 
 
 if __name__ == '__main__':
    app.run(debug = True)
