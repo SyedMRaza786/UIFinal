@@ -1,9 +1,7 @@
 // Lesson JS
 /** TODO:
-* 1. Flashcards
-* 2. Checkboxes
-* 3. Images
-* 4. Audio
+* 1. Images
+* 2. Audio
 **/
 
 //Flashcards based off of https://gist.github.com/code-boxx/82671620fc3543ee99fdc390e43b35b5

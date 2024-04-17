@@ -24,7 +24,7 @@
 		"lesson_id": 3,
 		"title": "Skill Check",
 		"body": "Please check all the boxes next to the concepts you understand.",
-		"self_check":"-Bike Tires typically hold between 50-70 PSI.\\n -Bike tires can be susceptible to ruptures based on environments.\\n -Bike tires have a clear audible noise to indicate rupture or maintenance.\\n -Bike tools are critical to repair bike tires",
+		"self_check":"Bike Tires typically hold between 50-70 PSI.\\n Bike tires can be susceptible to ruptures based on environments.\\n Bike tires have a clear audible noise to indicate rupture or maintenance.\\n Bike tools are critical to repair bike tires",
 		"prev_lesson":"2",
 		"next_lesson":"4"
 	},
