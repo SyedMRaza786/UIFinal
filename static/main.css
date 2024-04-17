@@ -1,0 +1,64 @@
+.center
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+.standard
+{
+    width: 6rem;
+}
+.answer
+{
+    box-sizing: border-box;
+    padding: 0.5rem;
+    border: transparent solid 2px;
+    cursor: pointer;
+}
+
+.selected-answer
+{
+    border: black solid 2px;
+}
+
+.valid-answer
+{
+    background-color: lightgreen;
+}
+
+.invalid-answer
+{
+    background-color: lightcoral;
+}
+
+.flex-center
+{
+    display: flex;
+    gap: 1rem;
+}
+.flex
+{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.audioBtn
+{
+    cursor: pointer;
+}
+
+.quiz
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.quiz>*
+{
+    flex-basis: 50%;
+}
