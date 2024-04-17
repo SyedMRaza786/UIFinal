@@ -40,6 +40,10 @@
     <a href="/quiz/{{question['quiz_id']+1}}">
         <button class="mt-4 standard btn btn-primary">Next</button>
     </a>
+    {%else%}
+    <a href="/quiz/results">
+        <button class="mt-4 standard btn btn-primary">View Results</button>
+    </a>
     {% endif %}
 
 </div>
