@@ -36,7 +36,20 @@ quiz_questions = {
         "question": "Is C02 Disposable, or reusable?",
         "options": ["Disposable", "Reusable", "Both", "Neither"],
         "answer": 0,
-    }
+    },
+    "5": {
+        "quiz_id": 5,
+        "question": "What is a hiss followed by a pop sound an indication of?",
+        "options": ["Bearing", "Small Leak", "Nothing, Normal Behavior", "Major Rupture"],
+        "answer": 3,
+    }, 
+      "6": {
+        "quiz_id": 6,
+        "question": "Which of the following items is not essential for repairing a bike tire?",
+        "options": ["CO2 Canister", "CO2 Nozzle", "Bike Lock", "Tire Plug"],
+        "answer": 2,
+    }, 
+
 }
     
 
