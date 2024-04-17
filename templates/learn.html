@@ -44,24 +44,30 @@
     <img src="{{ lesson.image }}" alt="main image">
 {%endif%}
 
-<!-- Loop through audio clips -->
-{% for audio_clip in lesson.audio_clips %}
-<div>
-    <p>{{ audio_clip.text }}</p>
-    <audio controls>
-        <source src="{{ audio_clip.sound_url }}" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-  
-</div>
-{% endfor %}
+{%if lesson.audio_clips %}
+<div class = "container grey padd-vert">
+    <div class = "row padd-vert">
+        <div class="offset-md-1 col-5" id = "audio-col"></div>
+            
+        <div class="col" id ="word-bank-col">
+            <div class="black no-padd">   
+                <p class="center"> Word Bank </p>
+            </div>
+            
+            <ul id = "word-bank" class="gallery ui-helper-reset ui-helper-clearfix"></ul>
+        </div>
+    </div>
 
-<!-- Loop through word bank -->
-{% for audio_clip in lesson.audio_clips %}
-<div>
-    <p>{{ audio_clip.word }}</p>
+    <div class = "row">
+        <div class="offset-md-8 col-4">
+            <button type="button" class = "btn btn-lg btn-info btn-block" id = "audio-btn" onclick="resetAudio()">Reset</button>
+        </div>
+    </div>
+    <br>
 </div>
-{% endfor %}
+
+{%endif%}
+
 
  <!-- Loop through images -->
 {% for tool in lesson.tools %}

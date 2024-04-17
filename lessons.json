@@ -52,9 +52,9 @@
 		"title": "Sound Check",
 		"body": "In order to understand if you are able to repair your bike tire, it is necessary to understand what exactly is wrong with your tire.\\n   Not all tire problems are created equally",
 		"audio_clips": [
-			{"sound_url": "/static/audio_clips/silenthiss.mp3", "text": "Near Silent Hiss\\n  Indication of small leak"},
-			{"sound_url": "/static/audio_clips/creaking-bearing.mp3", "text": "Creaking Noise Indication of Bearing, Not a Tire Problem"},
-			{"sound_url":"/static/audio_clips/pophiss.wav", "text":"Hiss Followed by Pop Indication of major rupture"}
+			{"sound_url": "/static/audio_clips/silenthiss.mp3", "text": "Near Silent Hiss", "answer": "Indication of small leak"},
+			{"sound_url": "/static/audio_clips/creaking-bearing.mp3", "text": "Creaking Noise", "answer": "Indication of Bearing, Not a Tire Problem"},
+			{"sound_url":"/static/audio_clips/pophiss.wav", "text":"Hiss Followed by Pop", "answer": "Indication of major rupture"}
 		],
 		"prev_lesson":"5",
 		"next_lesson":"7"

@@ -31,6 +31,24 @@
     background-color: rgb(225, 225, 225);
 }
 
+.white
+{
+    background-color: white;
+}
+
+.red{
+	background-color:red
+}
+
+.green{
+    background-color: green;
+}
+
+.border
+{
+    border: 5px solid black;
+}
+
 .padd-vert
 {
 	padding-top: 3px;
@@ -156,4 +174,25 @@
 .bCard .card.flip 
 {
     transform: rotateY(180deg); 
+}
+
+/* Audio Droppable */
+.droppable { 
+	border: 1px solid black;
+}
+
+.listI{
+	width: auto;
+	position: relative; 
+	left: 0px; 
+	top: 0px;	
+	padding: 1.5%;
+}
+.listI:hover{	
+	background-color: #FFFFE0;
+	cursor: move
+}
+
+.lightYellow{
+	background-color: #FFFFE0;
 }
