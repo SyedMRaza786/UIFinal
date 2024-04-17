@@ -14,11 +14,28 @@ with open('lessons.json') as f:
 quiz_questions = {
    "1":{
         "quiz_id": 1,
-        "question": "quesion 1"
+        "question": "Which is not a tire Problem?",
+        "options": ["Squeaking", "Pop", "Hissing", "Creaking"],
+        "audio": ["/static/audio_clips/creaking-bearing2.mp3", "/static/audio_clips/pophiss.mp3", "/static/audio_clips/silenthiss.mp3", "/static/audio_clips/creaking-bearing.mp3"],
+        "answer": 0
     },
     "2":{
         "quiz_id": 2,
-        "question": "question 2"
+        "question": "What do you attach to a C02 Canister?",
+        "options": ["You attach a hose", "You attach a cap", "You attach a nozzle", "You dont need to attach anything"],
+        "answer": 1,
+    },
+    "3": {
+        "quiz_id": 3,
+        "question": "What comes first in a tire repair",
+        "options": ["Filling up the tire with C02", "Attaching the nozzle on to the C02 Canister", "Attaching the plug to the tire plug tool", "None of the above"],
+        "answer": 2,
+    },
+    "4": {
+        "quiz_id": 4,
+        "question": "Is C02 Disposable, or reusable?",
+        "options": ["Disposable", "Reusable", "Both", "Neither"],
+        "answer": 0,
     }
 }
     
@@ -67,6 +84,11 @@ def learn(lesson_id):
 def quiz(quiz_id):
     question = quiz_questions[quiz_id]
     return render_template('quiz.html', question = question) 
+
+@app.route('/quiz/<quiz_id>', methods=['POST'])
+def quiz_answer(quiz_id):
+    question = quiz_questions[quiz_id]
+    return jsonify({'answer': question['answer']})
 
 
 # store user's choices in session
