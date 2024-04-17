@@ -92,3 +92,52 @@
 {
     flex-basis: 50%;
 }
+
+/* Flashcards */
+/* CARD BACK & FRONT */
+body, #screenA, #screenB {
+  padding: 0; margin: 0;
+  width: 100vw; height: 100vh;
+  display: flex;
+  /* justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+}
+
+#bCard {
+    width: 80%; height: 60%;
+    position: relative;
+}
+  
+/* (D2) CARD BACK & FRONT */
+.card { cursor: pointer; }
+.card, .front, .back {
+width: 100%; height: 100%;
+position: absolute;
+}
+.front, .back {
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 20px;
+font-size: 40px;
+border-radius: 10px;
+backface-visibility: hidden;
+}
+.front, .mFront {
+color: #2e189a;
+background: #fff;
+}
+.back, .mBack {
+color: #fff;
+background: #2e189a;
+}
+.back { transform: rotateY(180deg); }
+
+/* (D3) CARD FILP */
+.card {
+transition: transform 0.5s;
+transform-style: preserve-3d;
+}
+#bCard .card.flip { transform: rotateY(180deg); }

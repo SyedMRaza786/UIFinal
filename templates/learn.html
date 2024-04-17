@@ -24,14 +24,18 @@
 </div>
 
 {% if lesson.flashcards %}
-<div id = "card_block">
-  <!-- Loop through flashcards -->
-  {% for flashcard in lesson.flashcards %}
+<div class = "row" id = "card_block">
+    <!-- <div class = 'col-6' id='card-col-1'></div>
+    <div class = 'col-6' id='card-col-2'></div> -->
+    <div id="bCard" class="hide"></div>
+  
+</div>
+<!-- Loop through flashcards -->
+  <!-- {% for flashcard in lesson.flashcards %}
     <p>{{ flashcard.title }}</p>
     <img src="{{ flashcard.image_url }}" alt="Flashcard Image">
     <p>{{ flashcard.text }}</p>
-  {% endfor %}
-</div>
+  {% endfor %} -->
 {%endif%}
 
 

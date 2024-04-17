@@ -1,22 +1,72 @@
 // Lesson JS
+/** TODO:
+* 1. Flashcards
+* 2. Checkboxes
+* 3. Images
+* 4. Audio
+**/
 
 //Flashcards
-// Loop through flashcards 
-// {% for flashcard in lesson.flashcards %}
-//   <p>{{ flashcard.title }}</p>
-//   <img src="{{ flashcard.image_url }}" alt="Flashcard Image">
-//   <p>{{ flashcard.text }}</p>
-// {% endfor %}
 
 function makeCard (flashcard){
-	//card
+	console.log(flashcard["title"]);
+	var card = {
+		hCard : null,
+	};
+	card.hCard = document.getElementById("bCard");
+	// var card = "<div id = 'card"+"1"+"' >"+
+	// 	`<div class="card" onclick="this.classList.toggle('flip')">
+	// 	<div class="front">${flashcard["title"]}</div>
+	// 	<div class="back">${flashcard["text"]}</div>
+	// 	</div>`
+	// +"</div>";
+	// console.log(hCard);
+	// card.hCard = hCard;
 
-	//card-front
-
-	//card-back
-
-
+	card.hCard.innerHTML =
+		`<div class="card" onclick="this.classList.toggle('flip')">
+		<div class="front">${flashcard["title"]}</div>
+		<div class="back">${flashcard["text"]}</div>
+		</div>`;
+	console.log(card);
+	return card;
 };
+
+
+function makeCardBlock(){
+	// 2 columns of flashcards
+	// var col_length = lesson.flashcards.length%2;
+	
+	// for (let i = 0; i< 2; i++){
+	// 	for (let j = 0; j<col_length; j++){
+
+	// 	}
+	// 	var col = 
+	// 	$("<div class = 'col-6' id = 'card-col-"+i+"'>"
+
+	// 	+"</div>"
+	// 	);
+
+	// $("#card_block").prepend(col);
+	// }
+	var card = makeCard(lesson.flashcards[0]);
+	console.log(card);
+
+	// var col = 
+	// 	"<div class = 'col-6' id = 'card-col-test'>"
+	// 	+ card
+	// 	+"</div>";
+
+	// $(card).appendTo("#card-col-1");
+	
+}
+
+function checkCards(){
+	if( lesson.hasOwnProperty("flashcards")){
+		// makeCard ("testFront", "testBack");
+		makeCardBlock();
+	}
+}
 
 $.fn.multiline = function(text){
     this.text(text);
@@ -36,6 +86,7 @@ function updateBody(new_body){
 function updatePage(){
 	updateTitle(lesson["title"]);
 	updateBody(lesson["body"]);
+	checkCards();
 }
 
 
