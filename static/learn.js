@@ -174,4 +174,56 @@ $(document).ready(function(){
 			}
 		  }
 	});
+	 // Make images draggable
+	$('.tool-img').draggable({
+		revert: 'invalid', // Snap back if not dropped on valid target
+		start: function(event, ui) {
+		$(this).addClass('dragging'); // Add dragging class when dragging starts
+		$(this).css('opacity', '0.5'); // Reduce opacity to indicate dragging
+		},
+		stop: function(event, ui) {
+		$(this).removeClass('dragging'); // Remove dragging class when dragging stops
+		$(this).css('opacity', '1'); // Restore original opacity
+		}
+	});
+	
+	
+// Make draggable containers droppable
+$('.draggable-container').droppable({
+	drop: function(event, ui) {
+	  // Get the dragged image
+	  var draggedImage = ui.draggable;
+  
+	  // Get the tool ID of the dragged image and the match ID of the droppable container
+	  var toolId = draggedImage.data('tool-id');
+	  var targetMatch = $(this).find('img').data('match');
+  
+	  // If the tool ID matches the match ID of the droppable container, combine the items
+	  if (toolId === targetMatch) {
+
+		 // Add class 'success-match' to the droppable container
+		 $(this).addClass('success-match');
+
+		 // Reset the revert option to false
+		 ui.draggable.draggable('option', 'revert', false);
+
+		  // Get the feedback message from the data-feedback attribute of the dragged image
+		  var feedbackMessage = draggedImage.data('feedback');
+
+		  // Add feedback message if available
+		  if (feedbackMessage) {
+			$(this).append('<p class="feedback">' + feedbackMessage + '</p>');
+		  } else {
+			// If data-feedback attribute is not available, use default message
+			$(this).append('<p class="feedback">Items combined properly!</p>');
+		  }
+	  } else {
+		// If the match is not valid, revert the dragged image to its original position
+		ui.draggable.draggable('option', 'revert', true); // Set revert option to true
+	  }
+	}
+  });
+  
+  
+  
 });

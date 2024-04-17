@@ -196,3 +196,18 @@
 .lightYellow{
 	background-color: #FFFFE0;
 }
+
+.tool-img{
+    height: 100px;
+    width: 100px;
+}
+.main-img{
+    height: 400px;
+    width: 300px;
+}
+.success-match{
+    background-color: lightgreen; /* Change to the desired highlight color */
+}
+
+  
+  
