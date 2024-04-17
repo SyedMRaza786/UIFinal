@@ -1,121 +1,124 @@
 {
-    "1":{
-         "lesson_id": 1,
-         "title": "Welcome to this tutorial on how to replace your bike tires.",
-         "body":"Although intimidating at first, learning to repair your tires is a critical part of bike maintenance. \nHere, we will identify common problems, learn how to solve them, then provide common tips to prevent these problems.",
-         "prev_lesson":"0",
-         "next_lesson":"2"
-     },
-     "2":{
-         "lesson_id": 2,
-         "title": "Basic Overview Of Bike Tires",
-         "body":"Click each flashcard to learn more about bike tires",
-         "flashcards": [
+	"1":{
+		"lesson_id": 1,
+		"title": "Welcome to this tutorial on how to replace your bike tires.",
+		"body":"Although intimidating at first, learning to repair your tires is a critical part of bike maintenance. \\n Here, we will identify common problems, learn how to solve them, then provide common tips to prevent these problems.",
+		"prev_lesson":"0",
+		"next_lesson":"2"
+	},
+	"2":{
+		"lesson_id": 2,
+		"title": "Basic Overview Of Bike Tires",
+		"body":"Click each flashcard to learn more about bike tires",
+		"flashcards": [
             {"title": "What is critical to repair bike tires?","image_url": "https://www.kroger.com/product/images/large/front/0072823866316", "text": "Bike tools are critical to repair bike tires"},
             {"title": "What can make bike tires susceptible to ruptures?","image_url":"https://qph.cf2.quoracdn.net/main-qimg-8919648767a22a6d7401a65fe74583f4-pjlq", "text":"Bike tires can be susceptible to ruptures based on environments."},
             {"title":"Why might a bike tire be emitting a noise?", "image_url":"https://www.wikihow.com/images/thumb/1/1f/Fix-a-Bike-Tire-Step-1.jpg/v4-460px-Fix-a-Bike-Tire-Step-1.jpg", "text":"Bike tires emit a distinct noise for rupture or maintenance."},
             {"title": "Typical range of PSI that medium bike tires hold","image_url": "https://hips.hearstapps.com/hmg-prod/images/fixing-flat-0021-preview-1638910924.jpg?crop=0.668xw:1.00xh;0.0867xw,0&resize=1200:*", "text": "Hold between 50-70 PSI"}
-        ],
-         "prev_lesson":"1",
-         "next_lesson":"3"
-     },
-      "3":{
-         "lesson_id": 3,
-         "title": "Self Check: Please check all the boxes next to the concepts you understand.",
-         "body":"-Bike Tires typically hold between 50-70 PSI.\n-Bike tires can be susceptible to ruptures based on environments.\n-Bike tires have a clear audible noise to indicate rupture or maintenance.\n-Bike tools are critical to repair bike tires",
-         "prev_lesson":"2",
-         "next_lesson":"4"
-     },
-     "4":{
-        "lesson_id": 4,
-        "title": "Tire Identification",
-        "body":"These are all the parts of a Tire. Click each image to learn more",
-        "flashcards": [
-            {"title": "Outer Tube","image_url": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRmkiLprPUsYr_EnYRgx6CA9-lvOL7w82sSUhsqH7T5_AKiYIRC", "text": "This is the outer tube. This is the main part of the tire focused on repair. This holds the bikes grip."},
-            {"title": "Valve","image_url": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQGEKyYw5UxYTvguW9qSEdl59-e4yuI0G1f0F8TJt53ZFltiVJ6", "text": "This is the valve of the tire, where air is inserted"},
-            {"title": "Inner Tube","image_url":"https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQFgSnldq3vtd1OqUT5UmNEhuH8-g9xIGlk6YjagsGp63hDPgob", "text":"This is the inner tube of the bike that keeps the outer tube intact"}
-        ],
-        "prev_lesson":"3",
-        "next_lesson":"5"
-    },
-    "5":{
-        "lesson_id": 5,
-        "title": "Great, you are ready to move on to listening to samples",
-        "body":"For this exercise, it is best that you are in a quiet room or able to hear the samples without interruptions.\n This is a critical portion to identify the issues of the bike tires",
-        "prev_lesson":"4",
-        "next_lesson":"6"
-    },
-    "6":{
-        "lesson_id": 6,
-        "title": "Sound Check",
-        "body": "In order to understand if you are able to repair your bike tire, it is necessary to understand what exactly is wrong with your tire.\n  Not all tire problems are created equally",
-        "audio_clips": [
-            {"sound_url": "/static/audio_clips/silenthiss.mp3", "text": "Near Silent Hiss\n Indication of small leak"},
-            {"sound_url": "/static/audio_clips/creaking-bearing.mp3", "text": "Creaking Noise Indication of Bearing, Not a Tire Problem"},
-            {"sound_url":"/static/audio_clips/pophiss.wav", "text":"Hiss Followed by Pop Indication of major rupture"}
-        ],
-        "prev_lesson":"5",
-        "next_lesson":"7"
-    },
-    "7":{
-        "lesson_id": 7,
-        "title": "Skill Check",
-        "body": "Match the audio with the issue via Drag and Drop",
-        "audio_clips": [
-            {"sound_url": "/static/audio_clips/silenthiss2.mp3", "word":"Indication of small leak"},
-            {"sound_url":"/static/audio_clips/pophiss2.mp3", "word":"Indication of major rupture"},
-            {"sound_url": "/static/audio_clips/creaking-bearing2.mp3", "word": "Indication of bearing"}
-            
-        ],
-        "prev_lesson":"6",
-        "next_lesson":"8"
-    },
-    "8":{
-        "lesson_id": 8,
-        "title": "Tool Identification",
-        "body":"These are all the necessary tools for repair. Click each image to learn more",
-        "flashcards": [
-            {"title": "CO2 Canister","image_url": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcThYlKnJQRYtScwGjk6zL0nscLGF-9kMEmWY-GEdYiQ3A6moUII", "text": "A C02 Canister holds air. HIGHLY PRESSURIZED"},
-            {"title": "CO2 Nozzle","image_url": "https://i.ebayimg.com/thumbs/images/g/lpkAAOSwQ5VlNpxH/s-l225.jpg", "text": "C02 nozzle can be screwed on top to safely release pressure."},
-            {"title": "Tire Plug tool","image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaXnPjBA9--N0I-zRwFEAon6RsW2KM5SDCzQ&s", "text": "A Tire Plug tool can be used to insert the plug to a tire"},
-            {"title": "Tire Plug","image_url":"https://m.media-amazon.com/images/I/81YMYONqKPL._AC_UF894,1000_QL80_.jpg", "text": "Tire plugs are fundamental for blocking air"}
-        ],
-        "prev_lesson":"7",
-        "next_lesson":"9"
-    },
-    "9":{
-        "lesson_id": 9,
-        "title": "Combining Tools Drag and Drop",
-        "body":"Drag tools together to figure what works together to repair the tire",
-        "tools": [
-            {"image_url": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcThYlKnJQRYtScwGjk6zL0nscLGF-9kMEmWY-GEdYiQ3A6moUII", "name": "A C02 Canister"},
-            {"image_url": "https://i.ebayimg.com/thumbs/images/g/lpkAAOSwQ5VlNpxH/s-l225.jpg", "name": "C02 nozzle"},
-            {"image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaXnPjBA9--N0I-zRwFEAon6RsW2KM5SDCzQ&s", "name": "Tire Plug tool"},
-            {"image_url":"https://m.media-amazon.com/images/I/81YMYONqKPL._AC_UF894,1000_QL80_.jpg", "name": "Tire plugs"}
-        ],
-        "prev_lesson":"8",
-        "next_lesson":"10"
-    },
-    "10":{
-        "lesson_id": 10,
-        "title": "Self Check: Please check all the boxes next to the concepts you understand.",
-        "body":"-Tire plugs can not be inserted on its own\n- C02 has a risk of exploding if used improperly\n-C02 is disposable\n-Bike tools are critical to repair bike tires",
-        "prev_lesson":"9",
-        "next_lesson":"11"
-    },
-    "11":{
-        "lesson_id": 11,
-        "title": "3D Model",
-        "body":"Combine tools together then drag them to the bike to repair it",
-        "image":"https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/82614c38823695.5770ea557a3a8.gif",
-        "tools": [
-            {"image_url": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcThYlKnJQRYtScwGjk6zL0nscLGF-9kMEmWY-GEdYiQ3A6moUII", "name": "A C02 Canister"},
-            {"image_url": "https://i.ebayimg.com/thumbs/images/g/lpkAAOSwQ5VlNpxH/s-l225.jpg", "name": "C02 nozzle"},
-            {"image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaXnPjBA9--N0I-zRwFEAon6RsW2KM5SDCzQ&s", "name": "Tire Plug tool"},
-            {"image_url":"https://m.media-amazon.com/images/I/81YMYONqKPL._AC_UF894,1000_QL80_.jpg", "name": "Tire plugs"}
-        ],
-        "prev_lesson":"10",
-        "next_lesson":"end"
-    }
-    
+		],
+		
+		"prev_lesson":"1",
+		"next_lesson":"3"
+	},
+	"3":{
+		"lesson_id": 3,
+		"title": "Skill Check",
+		"body": "Please check all the boxes next to the concepts you understand.",
+		"self_check":"Bike Tires typically hold between 50-70 PSI.\\n Bike tires can be susceptible to ruptures based on environments.\\n Bike tires have a clear audible noise to indicate rupture or maintenance.\\n Bike tools are critical to repair bike tires",
+		"prev_lesson":"2",
+		"next_lesson":"4"
+	},
+	"4":{
+		"lesson_id": 4,
+		"title": "Tire Identification",
+		"body":"These are all the parts of a Tire. Click each image to learn more",
+		"flashcards": [
+			{"title": "Outer Tube","image_url": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRmkiLprPUsYr_EnYRgx6CA9-lvOL7w82sSUhsqH7T5_AKiYIRC", "text": "This is the outer tube. This is the main part of the tire focused on repair. This holds the bikes grip."},
+			{"title": "Valve","image_url": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQGEKyYw5UxYTvguW9qSEdl59-e4yuI0G1f0F8TJt53ZFltiVJ6", "text": "This is the valve of the tire, where air is inserted"},
+			{"title": "Inner Tube","image_url":"https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQFgSnldq3vtd1OqUT5UmNEhuH8-g9xIGlk6YjagsGp63hDPgob", "text":"This is the inner tube of the bike that keeps the outer tube intact"}
+		],
+		"prev_lesson":"3",
+		"next_lesson":"5"
+	},
+	"5":{
+		"lesson_id": 5,
+		"title": "Great, you are ready to move on to listening to samples",
+		"body":"For this exercise, it is best that you are in a quiet room or able to hear the samples without interruptions.\\n  This is a critical portion to identify the issues of the bike tires",
+		"prev_lesson":"4",
+		"next_lesson":"6"
+	},
+	"6":{
+		"lesson_id": 6,
+		"title": "Sound Check",
+		"body": "In order to understand if you are able to repair your bike tire, it is necessary to understand what exactly is wrong with your tire.\\n   Not all tire problems are created equally",
+		"audio_clips": [
+			{"sound_url": "/static/audio_clips/silenthiss.mp3", "text": "Near Silent Hiss", "answer": "Indication of small leak"},
+			{"sound_url": "/static/audio_clips/creaking-bearing.mp3", "text": "Creaking Noise", "answer": "Indication of Bearing, Not a Tire Problem"},
+			{"sound_url":"/static/audio_clips/pophiss.wav", "text":"Hiss Followed by Pop", "answer": "Indication of major rupture"}
+		],
+		"prev_lesson":"5",
+		"next_lesson":"7"
+	},
+	"7":{
+		"lesson_id": 7,
+		"title": "Skill Check",
+		"body": "Match the audio with the issue via Drag and Drop",
+		"audio_clips": [
+			{"sound_url": "/static/audio_clips/silenthiss2.mp3", "word":"Indication of small leak"},
+			{"sound_url":"/static/audio_clips/pophiss2.mp3", "word":"Indication of major rupture"},
+			{"sound_url": "/static/audio_clips/creaking-bearing2.mp3", "word": "Indication of bearing"}
+				
+		],
+		"prev_lesson":"6",
+		"next_lesson":"8"
+	},
+	"8":{
+		"lesson_id": 8,
+		"title": "Tool Identification",
+		"body": "These are all the necessary tools for repair. Click each image to learn more",
+		"flashcards": [
+			{"title": "CO2 Canister","image_url": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcThYlKnJQRYtScwGjk6zL0nscLGF-9kMEmWY-GEdYiQ3A6moUII", "text": "A C02 Canister holds air. HIGHLY PRESSURIZED"},
+			{"title": "CO2 Nozzle","image_url": "https://i.ebayimg.com/thumbs/images/g/lpkAAOSwQ5VlNpxH/s-l225.jpg", "text": "C02 nozzle can be screwed on top to safely release pressure."},
+			{"title": "Tire Plug tool","image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaXnPjBA9--N0I-zRwFEAon6RsW2KM5SDCzQ&s", "text": "A Tire Plug tool can be used to insert the plug to a tire"},
+			{"title": "Tire Plug","image_url":"https://m.media-amazon.com/images/I/81YMYONqKPL._AC_UF894,1000_QL80_.jpg", "text": "Tire plugs are fundamental for blocking air"}
+		],
+		"prev_lesson":"7",
+		"next_lesson":"9"
+	},
+	"9":{
+		"lesson_id": 9,
+		"title": "Combining Tools Drag and Drop",
+		"body": "Drag tools together to figure what works together to repair the tire",
+		"tools": [
+			{"image_url": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcThYlKnJQRYtScwGjk6zL0nscLGF-9kMEmWY-GEdYiQ3A6moUII", "name": "A C02 Canister"},
+			{"image_url": "https://i.ebayimg.com/thumbs/images/g/lpkAAOSwQ5VlNpxH/s-l225.jpg", "name": "C02 nozzle"},
+			{"image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaXnPjBA9--N0I-zRwFEAon6RsW2KM5SDCzQ&s", "name": "Tire Plug tool"},
+			{"image_url":"https://m.media-amazon.com/images/I/81YMYONqKPL._AC_UF894,1000_QL80_.jpg", "name": "Tire plugs"}
+		],
+		"prev_lesson":"8",
+		"next_lesson":"10"
+	},
+	"10":{
+		"lesson_id": 10,
+		"title": "Self Check",
+		"body":"Please check all the boxes next to the concepts you understand.",
+		"self_check":"-Tire plugs can not be inserted on its own\\n - C02 has a risk of exploding if used improperly\\n -C02 is disposable\\n -Bike tools are critical to repair bike tires",
+		"prev_lesson":"9",
+		"next_lesson":"11"
+	},
+	"11":{
+		"lesson_id": 11,
+		"title": "3D Model",
+		"body":"Combine tools together then drag them to the bike to repair it",
+		"image":"https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/82614c38823695.5770ea557a3a8.gif",
+		"tools": [
+			{"image_url": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcThYlKnJQRYtScwGjk6zL0nscLGF-9kMEmWY-GEdYiQ3A6moUII", "name": "A C02 Canister"},
+			{"image_url": "https://i.ebayimg.com/thumbs/images/g/lpkAAOSwQ5VlNpxH/s-l225.jpg", "name": "C02 nozzle"},
+			{"image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaXnPjBA9--N0I-zRwFEAon6RsW2KM5SDCzQ&s", "name": "Tire Plug tool"},
+			{"image_url":"https://m.media-amazon.com/images/I/81YMYONqKPL._AC_UF894,1000_QL80_.jpg", "name": "Tire plugs"}
+		],
+		"prev_lesson":"10",
+		"next_lesson":"end"
+	}
+	
  }

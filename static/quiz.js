@@ -14,8 +14,7 @@ function tryAnswer(index) {
     selectedAnswer = index
 }
 
-function checkAnswers() {
-    
+function checkAnswers() {    
     const data = {
         selectedAnswer: selectedAnswer 
     };

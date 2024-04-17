@@ -1,67 +1,103 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<script>    
+    var lesson = {{ lesson | tojson | safe}};
+</script>
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'learn.js') }}"></script>
 
 <!-- basic page info. -->
-{{lesson.title}}<br>
+<div class="row">
+    <div class = "col-12">
+        <h1 id = "lesson_title" class="center"></h1>
+    </div>
+</div>
 
-{%if "Self Check" in lesson.title %}
-{% include "checkbox.html" %}
-{%else%}
-{{lesson.body}}<br>
+<br>
+<br>
+
+<div class="row">
+    <div class = "offset-md-1 col-10">
+        <p id = "lesson_body" class = "body text-justify"></p>
+    </div>
+</div>
+
+{% if lesson.flashcards %}
+<div class = "row" id = "card_block">
+    <div class = 'col-6' id='card-col-1'></div>
+    <div class = 'col-6' id='card-col-2'></div>  
+</div>
+{%endif%}
+
+
+{%if lesson.self_check %}
+<div class="row">
+    <div class = "offset-md-1 col-10">
+        {% include "checkbox.html" %}
+    </div>
+</div>
 {%endif%}
 
 
 {% if lesson.image %}
-<img src="{{ lesson.image }}" alt="main image">
+    <img src="{{ lesson.image }}" alt="main image">
 {%endif%}
 
- <!-- Loop through flashcards -->
- {% for flashcard in lesson.flashcards %}
- <div>
-    <p>{{ flashcard.title }}</p>
-     <img src="{{ flashcard.image_url }}" alt="Flashcard Image">
-     <p>{{ flashcard.text }}</p>
- </div>
-{% endfor %}
+{%if lesson.audio_clips %}
+<div class = "container grey padd-vert">
+    <div class = "row padd-vert">
+        <div class="offset-md-1 col-5" id = "audio-col"></div>
+            
+        <div class="col" id ="word-bank-col">
+            <div class="black no-padd">   
+                <p class="center"> Word Bank </p>
+            </div>
+            
+            <ul id = "word-bank" class="gallery ui-helper-reset ui-helper-clearfix"></ul>
+        </div>
+    </div>
 
-<!-- Loop through audio clips -->
-{% for audio_clip in lesson.audio_clips %}
-<div>
-    <p>{{ audio_clip.text }}</p>
-    <audio controls>
-        <source src="{{ audio_clip.sound_url }}" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-  
+    <div class = "row">
+        <div class="offset-md-8 col-4">
+            <button type="button" class = "btn btn-lg btn-info btn-block" id = "audio-btn" onclick="resetAudio()">Reset</button>
+        </div>
+    </div>
+    <br>
 </div>
-{% endfor %}
 
-<!-- Loop through word bank -->
-{% for audio_clip in lesson.audio_clips %}
-<div>
-    <p>{{ audio_clip.word }}</p>
-</div>
-{% endfor %}
+{%endif%}
+
 
  <!-- Loop through images -->
- {% for tool in lesson.tools %}
+{% for tool in lesson.tools %}
  <div>
      <img src="{{ tool.image_url }}" alt="Tool Image">
  </div>
 {% endfor %}
 
+<br>
+<br>
+<br>
 
 <!-- previous and next buttons -->
-{% if lesson.prev_lesson | int != 0 %}
-    <a href="/learn/{{lesson.prev_lesson}}"><button>Prev</button></a>
-{%endif%}
+<div class = "fixed-bottom grey padd-vert">
+    <div class = "row justify-content-between no-padd">
+        <div class = "col">
+            {% if lesson.prev_lesson | int != 0 %}
+            <a class="btn btn-secondary btn-lg btn-block" href="/learn/{{lesson.prev_lesson}}" role="button" id = "btn-prev">Prev</a>
+            {%endif%}
+        </div>
 
-{% if lesson.next_lesson == "end" %}
-    <a href="/quiz/1"><button>Next</button></a>
-{% else %}
-    <a href="/learn/{{lesson.next_lesson}}"><button>Next</button></a>
-{%endif%}
+        <div class = "col">
+            {% if lesson.next_lesson == "end" %}
+                <a class="btn btn-primary btn-lg btn-block" href="/quiz/1" role="button" id = "btn-next-is-quiz">Next</a>
+            {% else %}
+                <a class="btn btn-primary btn-lg btn-block" href="/learn/{{lesson.next_lesson}}" role="button"id = "btn-next">Next</a>
+            {%endif%}
+        </div>
+    </div>
+</div>
+
 
 {% endblock %}
-

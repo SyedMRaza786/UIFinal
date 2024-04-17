@@ -1,19 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Checkbox for Each Sentence</title>
-</head>
-<body>
-    <form action="/learn/{{ lesson.lesson_id }}" method="post">
+<form action="/learn/{{ lesson.lesson_id }}" method="post">
+    <div class="form-check body">
         <input type="hidden" name="lesson_id" value="{{ lesson.lesson_id }}">
-        {% for sentence in lesson.body.split('\n') %}
-            <label>
-                {{ sentence.strip() }}
-                <input type="checkbox" name="sentence" value="{{ sentence.strip() }}">
-            </label>
+        {% for sentence in lesson.self_check.split('\\n') %}
             <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="{{ sentence.strip() }}" id="{{ sentence.strip() }}">
+                <label class="form-check-label" for="{{ sentence.strip() }}">
+                {{ sentence.strip() }}
+                </label>
+            </div>
         {% endfor %}
-        <button type="submit">Submit</button>
-    </form>
-</body>
-</html>
+        
+    </div>
+
+    <br>
+    <br>
+
+    <button type="button submit" class = "btn btn-primary">Submit</button>
+</form>
