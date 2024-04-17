@@ -2,6 +2,8 @@
 
 {% block content %}
 
+<script type="text/javascript" src="{{ url_for('static', filename = 'project.js') }}"></script>
+
 <!-- basic page info. -->
 {{lesson.title}}<br>
 
@@ -16,14 +18,17 @@
 <img src="{{ lesson.image }}" alt="main image">
 {%endif%}
 
- <!-- Loop through flashcards -->
- {% for flashcard in lesson.flashcards %}
- <div>
+{% if lesson.flashcards %}
+<div id = "card_block">
+  <!-- Loop through flashcards -->
+  {% for flashcard in lesson.flashcards %}
     <p>{{ flashcard.title }}</p>
-     <img src="{{ flashcard.image_url }}" alt="Flashcard Image">
-     <p>{{ flashcard.text }}</p>
- </div>
-{% endfor %}
+    <img src="{{ flashcard.image_url }}" alt="Flashcard Image">
+    <p>{{ flashcard.text }}</p>
+  {% endfor %}
+</div>
+{%endif%}
+
 
 <!-- Loop through audio clips -->
 {% for audio_clip in lesson.audio_clips %}
