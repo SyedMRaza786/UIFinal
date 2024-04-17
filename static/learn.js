@@ -9,26 +9,13 @@
 //Flashcards
 
 function makeCard (flashcard){
-	console.log(flashcard["title"]);
-	var card = {
-		hCard : null,
-	};
-	card.hCard = document.getElementById("bCard");
-	// var card = "<div id = 'card"+"1"+"' >"+
-	// 	`<div class="card" onclick="this.classList.toggle('flip')">
-	// 	<div class="front">${flashcard["title"]}</div>
-	// 	<div class="back">${flashcard["text"]}</div>
-	// 	</div>`
-	// +"</div>";
-	// console.log(hCard);
-	// card.hCard = hCard;
-
-	card.hCard.innerHTML =
+	var card = "<div class = 'hide bCard' id = 'card"+"1"+"' >"+
 		`<div class="card" onclick="this.classList.toggle('flip')">
 		<span class="front">${flashcard["title"]}</span>
 		<span class="back">${flashcard["text"]}</span>
-		</div>`;
-	console.log(card);
+		</div>`
+		+"</div>";
+
 	return card;
 };
 
@@ -57,7 +44,7 @@ function makeCardBlock(){
 	// 	+ card
 	// 	+"</div>";
 
-	// $(card).appendTo("#card-col-1");
+	$(card).appendTo("#card-col-1");
 	
 }
 

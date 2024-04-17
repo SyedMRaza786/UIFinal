@@ -95,7 +95,7 @@
 
 /* Flashcards */
 /* CARD BACK & FRONT */
-#bCard {
+.bCard {
     height: 300px;
     position: relative;
 }
@@ -118,18 +118,18 @@
     backface-visibility: hidden;
 }
 .front, .mFront {
-color: #2e189a;
-background: #fff;
+    color: #2e189a;
+    background: #fff;
 }
 .back, .mBack {
-color: #fff;
-background: #2e189a;
+    color: #fff;
+    background: #2e189a;
 }
 .back { transform: rotateY(180deg); }
 
 /* (D3) CARD FILP */
 .card {
-transition: transform 0.5s;
-transform-style: preserve-3d;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
 }
-#bCard .card.flip { transform: rotateY(180deg); }
+.bCard .card.flip { transform: rotateY(180deg); }
