@@ -8,11 +8,14 @@
 
 //Flashcards based off of https://gist.github.com/code-boxx/82671620fc3543ee99fdc390e43b35b5
 
-function makeCard (flashcard){
-	var card = "<div class = 'hide bCard padded' id = 'card"+"1"+"' >"+
+function makeCard (flashcard, idx){
+	var card = "<div class = 'hide bCard padded' id = 'card_"+ idx+"' >"+
 		`<div class="card" onclick="this.classList.toggle('flip')">
 		<span class="front">${flashcard["title"]}</span>
-		<span class="back">${flashcard["text"]}</span>
+		<div class="back">
+			${flashcard["text"]}
+			<img src = "${flashcard["image_url"]}" class="sm-img">
+		</div>
 		</div>`
 		+"</div>";
 
@@ -25,7 +28,7 @@ function makeCardBlock(){
 	var col_length = lesson.flashcards.length/2;
 	
 	for (let idx = 0; idx< lesson.flashcards.length; idx++){ 
-		var card = makeCard(lesson.flashcards[idx]);
+		var card = makeCard(lesson.flashcards[idx], idx);
 		if (idx<col_length){
 			$(card).appendTo("#card-col-1");
 		}

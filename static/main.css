@@ -95,18 +95,26 @@
 
 /* Flashcards CSS from https://gist.github.com/code-boxx/82671620fc3543ee99fdc390e43b35b5 */
 /* CARD BACK & FRONT */
-.bCard {
+.bCard 
+{
     height: 300px;
     position: relative;
 }
   
-.card { cursor: pointer; }
-.card, .front, .back {
+.card
+{ 
+    cursor: pointer; 
+}
+
+.card, .front, .back
+{
     width: 100%; 
     height: 100%;
     position: absolute;
 }
-.front, .back {
+
+.front, .back
+{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -116,19 +124,36 @@
     border-radius: 10px;
     backface-visibility: hidden;
 }
-.front, .mFront {
+
+.front {
     color: #2e189a;
     background: #fff;
 }
-.back, .mBack {
+
+.sm-img
+{
+    width: 200px;
+    height: 200px;
+}
+
+.back
+{
     color: #fff;
     background: #2e189a;
 }
-.back { transform: rotateY(180deg); }
 
-/* (D3) CARD FILP */
-.card {
+.back
+{
+    transform: rotateY(180deg); 
+}
+
+.card 
+{
     transition: transform 0.5s;
     transform-style: preserve-3d;
 }
-.bCard .card.flip { transform: rotateY(180deg); }
+
+.bCard .card.flip 
+{
+    transform: rotateY(180deg); 
+}
