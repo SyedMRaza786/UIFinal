@@ -25,8 +25,8 @@ function makeCard (flashcard){
 
 	card.hCard.innerHTML =
 		`<div class="card" onclick="this.classList.toggle('flip')">
-		<div class="front">${flashcard["title"]}</div>
-		<div class="back">${flashcard["text"]}</div>
+		<span class="front">${flashcard["title"]}</span>
+		<span class="back">${flashcard["text"]}</span>
 		</div>`;
 	console.log(card);
 	return card;
