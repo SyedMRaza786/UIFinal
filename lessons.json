@@ -63,11 +63,11 @@
 		"lesson_id": 7,
 		"title": "Skill Check",
 		"body": "Match the audio with the issue via Drag and Drop",
+        "skill_check": "true",
 		"audio_clips": [
-			{"sound_url": "/static/audio_clips/silenthiss2.mp3", "word":"Indication of small leak"},
-			{"sound_url":"/static/audio_clips/pophiss2.mp3", "word":"Indication of major rupture"},
-			{"sound_url": "/static/audio_clips/creaking-bearing2.mp3", "word": "Indication of bearing"}
-				
+			{"sound_url": "/static/audio_clips/silenthiss2.mp3", "answer":"Indication of small leak"},
+			{"sound_url":"/static/audio_clips/pophiss2.mp3", "answer":"Indication of major rupture"},
+			{"sound_url": "/static/audio_clips/creaking-bearing2.mp3", "answer": "Indication of bearing"}			
 		],
 		"prev_lesson":"6",
 		"next_lesson":"8"

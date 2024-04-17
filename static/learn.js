@@ -1,7 +1,6 @@
 // Lesson JS
 /** TODO:
 * 1. Images
-* 2. Audio
 **/
 
 //Flashcards based off of https://gist.github.com/code-boxx/82671620fc3543ee99fdc390e43b35b5
@@ -44,16 +43,9 @@ function checkCards(){
 	}
 }
 
-function makeSingleAudio(i, text, aux_clip){
+function makeSingleAudio(i, aux_clip){
 	var audio_col = 
 		`<div class="droppable ui-widget-header ui-state-default padded" data=${i} id ="drop_{i}">
-			<div class='row' id = 'desc_row_${i}'>
-				<div id = 'aud_description_${i}'>
-					${text}
-				</div>
-			</div>
-
-			<br>
 
 			<div class='row' id = 'audio_row_${i}'>
 				<div id = 'audio_${i}'>
@@ -80,7 +72,7 @@ function makeAudioAnswer(i, answer){
 
 function makeAudioBlock(){
 	for (let i = 0; i<lesson.audio_clips.length; i++){
-		var temp_audio = makeSingleAudio(i, lesson.audio_clips[i]["text"],lesson.audio_clips[i]["sound_url"]);
+		var temp_audio = makeSingleAudio(i, lesson.audio_clips[i]["sound_url"]);
 
 		var temp_answer = makeAudioAnswer(i, lesson.audio_clips[i]["answer"])
 		
@@ -95,9 +87,43 @@ function resetAudio(){
 	window.location.reload();
 };
 
+function makeAudPractice(){
+	for (let i = 0; i<lesson.audio_clips.length; i++){
+		let aud = lesson.audio_clips[i]
+		console.log(aud);
+		var audio_col = 
+			`<div class='row' id = 'desc_row_${i}'>
+					<div id = 'aud_description_${i}'>
+						${aud["text"]}
+					</div>
+				</div>
+
+				<br>
+
+				<div class='row' id = 'audio_row_${i}'>
+					<div class = "col">
+						<div id = 'audio_${i}'>
+							<audio controls>
+								<source src='${aud['sound_url']}' type="audio/mpeg">
+								Your browser does not support the audio element.
+							</audio>
+						</div>
+					</div>
+					<div class = "col">
+						${aud['answer']}
+					</div>
+				</div>
+			</div>`;
+		$(audio_col).appendTo("#audio-practice");
+	}
+}
 
 function checkAudio(){
-	if( lesson.hasOwnProperty("audio_clips")){
+	if( lesson.hasOwnProperty("audio_clips") &! lesson.hasOwnProperty("skill_check") ){
+		makeAudPractice();
+	}
+
+	else if( lesson.hasOwnProperty("audio_clips") && lesson.hasOwnProperty("skill_check") ){
 		makeAudioBlock();
 	}
 }
@@ -137,7 +163,7 @@ $(document).ready(function(){
 		drop: function(event, ui) { 
 			$(ui.draggable).draggable('disable');
 
-			if ($(ui.draggable).attr("data") ==$(this).attr("data") ){
+			if ($(ui.draggable).attr("data") == $(this).attr("data") ){
 				$(this).addClass('green');
 				$(ui.draggable).addClass('green');     
 			}

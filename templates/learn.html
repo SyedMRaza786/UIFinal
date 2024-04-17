@@ -47,6 +47,7 @@
 {%if lesson.audio_clips %}
 <div class = "container grey padd-vert">
     <div class = "row padd-vert">
+        {%if lesson.skill_check %}
         <div class="offset-md-1 col-5" id = "audio-col"></div>
             
         <div class="col" id ="word-bank-col">
@@ -56,13 +57,18 @@
             
             <ul id = "word-bank" class="gallery ui-helper-reset ui-helper-clearfix"></ul>
         </div>
+        {% else %}
+        <div class="col" id="audio-practice"></div>
+        {%endif%}
     </div>
-
+    {%if lesson.skill_check %}
     <div class = "row">
         <div class="offset-md-8 col-4">
             <button type="button" class = "btn btn-lg btn-info btn-block" id = "audio-btn" onclick="resetAudio()">Reset</button>
         </div>
     </div>
+    {%endif%}
+
     <br>
 </div>
 
