@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<div class="center">
+    <h2>Quiz Results</h2>
+    <h2>
+        Score: {{score}}/6
+    </h2>
+    {% if score < 5 %}
+    <h4>You Failed :(</h4>
+{% else %}
+    <h4>You Passed!!</h4>
+{% endif %}
+
+    <a href="/clear_session"><button class="mt-4 btn btn-primary">Return Home</button></a>
+</div>
+
+
+
+
+{% endblock %}
