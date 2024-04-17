@@ -93,14 +93,13 @@
     flex-basis: 50%;
 }
 
-/* Flashcards */
+/* Flashcards CSS from https://gist.github.com/code-boxx/82671620fc3543ee99fdc390e43b35b5 */
 /* CARD BACK & FRONT */
 .bCard {
     height: 300px;
     position: relative;
 }
   
-/* (D2) CARD BACK & FRONT */
 .card { cursor: pointer; }
 .card, .front, .back {
     width: 100%; 

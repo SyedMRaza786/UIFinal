@@ -6,10 +6,10 @@
 * 4. Audio
 **/
 
-//Flashcards
+//Flashcards based off of https://gist.github.com/code-boxx/82671620fc3543ee99fdc390e43b35b5
 
 function makeCard (flashcard){
-	var card = "<div class = 'hide bCard' id = 'card"+"1"+"' >"+
+	var card = "<div class = 'hide bCard padded' id = 'card"+"1"+"' >"+
 		`<div class="card" onclick="this.classList.toggle('flip')">
 		<span class="front">${flashcard["title"]}</span>
 		<span class="back">${flashcard["text"]}</span>
@@ -22,29 +22,17 @@ function makeCard (flashcard){
 
 function makeCardBlock(){
 	// 2 columns of flashcards
-	// var col_length = lesson.flashcards.length%2;
+	var col_length = lesson.flashcards.length/2;
 	
-	// for (let i = 0; i< 2; i++){
-	// 	for (let j = 0; j<col_length; j++){
-
-	// 	}
-	// 	var col = 
-	// 	$("<div class = 'col-6' id = 'card-col-"+i+"'>"
-
-	// 	+"</div>"
-	// 	);
-
-	// $("#card_block").prepend(col);
-	// }
-	var card = makeCard(lesson.flashcards[0]);
-	console.log(card);
-
-	// var col = 
-	// 	"<div class = 'col-6' id = 'card-col-test'>"
-	// 	+ card
-	// 	+"</div>";
-
-	$(card).appendTo("#card-col-1");
+	for (let idx = 0; idx< lesson.flashcards.length; idx++){ 
+		var card = makeCard(lesson.flashcards[idx]);
+		if (idx<col_length){
+			$(card).appendTo("#card-col-1");
+		}
+		else{
+			$(card).appendTo("#card-col-2");
+		}
+	}
 	
 }
 
