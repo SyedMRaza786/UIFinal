@@ -16,7 +16,7 @@ quiz_questions = {
         "quiz_id": 1,
         "question": "Which is not a tire Problem?",
         "options": ["Squeaking", "Pop", "Hissing", "Creaking"],
-        "audio": ["/static/audio_clips/creaking-bearing2.mp3", "/static/audio_clips/pophiss.mp3", "/static/audio_clips/silenthiss.mp3", "/static/audio_clips/creaking-bearing.mp3"],
+        "audio": ["/static/audio_clips/creaking-bearing2.mp3", "/static/audio_clips/pophiss.wav", "/static/audio_clips/silenthiss.mp3", "/static/audio_clips/creaking-bearing.mp3"],
         "answer": 0
     },
     "2":{
@@ -36,7 +36,20 @@ quiz_questions = {
         "question": "Is C02 Disposable, or reusable?",
         "options": ["Disposable", "Reusable", "Both", "Neither"],
         "answer": 0,
-    }
+    },
+    "5": {
+        "quiz_id": 5,
+        "question": "What is a hiss followed by a pop sound an indication of?",
+        "options": ["Bearing", "Small Leak", "Nothing, Normal Behavior", "Major Rupture"],
+        "answer": 3,
+    }, 
+      "6": {
+        "quiz_id": 6,
+        "question": "Which of the following items is not essential for repairing a bike tire?",
+        "options": ["CO2 Canister", "CO2 Nozzle", "Bike Lock", "Tire Plug"],
+        "answer": 2,
+    }, 
+
 }
     
 
@@ -88,7 +101,32 @@ def quiz(quiz_id):
 @app.route('/quiz/<quiz_id>', methods=['POST'])
 def quiz_answer(quiz_id):
     question = quiz_questions[quiz_id]
+    user_answer = request.json.get('selectedAnswer')
+      # Get the quiz answers dictionary from the session, or create a new one if it doesn't exist
+    quiz_answers = session.setdefault('quiz_answers', {})
+    
+    # Update the selected answer for the specific quiz question
+    if quiz_id not in quiz_answers:
+        quiz_answers[quiz_id] = {}
+    
+    quiz_answers[quiz_id].update({
+        'selected_answer': user_answer
+    })
+    session['quiz_answers'] = quiz_answers
+
     return jsonify({'answer': question['answer']})
+
+@app.route('/quiz/results')
+def quiz_results():
+    quiz_answers = session.setdefault('quiz_answers', {})
+    score = 0
+    # calculate score
+    for quiz_id, answer_data in quiz_answers.items():
+        selected_answer = answer_data['selected_answer']
+        if int(selected_answer) == int(quiz_questions[quiz_id]["answer"]):
+            score +=1
+
+    return render_template('quiz_results.html', score=score) 
 
 
 # store user's choices in session

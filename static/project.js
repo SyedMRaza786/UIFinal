@@ -15,15 +15,28 @@ function tryAnswer(index) {
 }
 
 function checkAnswers() {
-    fetch(window.location, { method: 'POST' })
-        .then(response => response.json()
-            .then(data => {
-                const validAnswer = document.querySelector('#answer'+data['answer'])
-                const curAnswer = document.querySelector('#answer'+selectedAnswer)
-                validAnswer.classList.add('valid-answer')
-                if(!validAnswer.classList.contains('selected-answer')){
-                    curAnswer.classList.add('invalid-answer')
-                }
-            })
-        )
+    
+    const data = {
+        selectedAnswer: selectedAnswer 
+    };
+
+    fetch(window.location, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data) 
+    })
+    .then(response => response.json())
+    .then(data => {
+        const validAnswer = document.querySelector('#answer' + data['answer']);
+        const curAnswer = document.querySelector('#answer' + selectedAnswer);
+        validAnswer.classList.add('valid-answer');
+        if (!validAnswer.classList.contains('selected-answer')) {
+            curAnswer.classList.add('invalid-answer');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
 }
