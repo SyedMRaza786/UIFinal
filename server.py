@@ -92,7 +92,6 @@ def learn(lesson_id):
     
     # Render the learn.html template for GET requests
     lesson = lessons[lesson_id]
-    print("lesson: ", lesson)
     return render_template('learn.html', lesson=lesson)
 
 @app.route('/quiz/<quiz_id>')

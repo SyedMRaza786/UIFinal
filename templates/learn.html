@@ -1,22 +1,27 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<script>    
+    var lesson = {{ lesson | tojson | safe}};
+</script>
 
-<script type="text/javascript" src="{{ url_for('static', filename = 'project.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'learn.js') }}"></script>
 
 <!-- basic page info. -->
-{{lesson.title}}<br>
+<div class="row">
+    <div class = "col-12">
+        <h1 id = "lesson_title" class="center"></h1>
+    </div>
+</div>
 
-{%if "Self Check" in lesson.title %}
-{% include "checkbox.html" %}
-{%else%}
-{{lesson.body}}<br>
-{%endif%}
+<br>
+<br>
 
-
-{% if lesson.image %}
-<img src="{{ lesson.image }}" alt="main image">
-{%endif%}
+<div class="row">
+    <div class = "offset-md-1 col-10">
+        <p id = "lesson_body" class = "body text-justify"></p>
+    </div>
+</div>
 
 {% if lesson.flashcards %}
 <div id = "card_block">
@@ -29,6 +34,17 @@
 </div>
 {%endif%}
 
+
+<!-- {%if "Self Check" in lesson.title %}
+{% include "checkbox.html" %}
+{%else%}
+{{lesson.body}}<br>
+{%endif%} -->
+
+
+{% if lesson.image %}
+<img src="{{ lesson.image }}" alt="main image">
+{%endif%}
 
 <!-- Loop through audio clips -->
 {% for audio_clip in lesson.audio_clips %}
@@ -58,15 +74,23 @@
 
 
 <!-- previous and next buttons -->
-{% if lesson.prev_lesson | int != 0 %}
-    <a href="/learn/{{lesson.prev_lesson}}"><button>Prev</button></a>
-{%endif%}
+<div class = "fixed-bottom grey padd-vert">
+    <div class = "row justify-content-between no-padd">
+        <div class = "col">
+            {% if lesson.prev_lesson | int != 0 %}
+            <a class="btn btn-secondary btn-lg btn-block" href="/learn/{{lesson.prev_lesson}}" role="button" id = "btn-prev">Prev</a>
+            {%endif%}
+        </div>
 
-{% if lesson.next_lesson == "end" %}
-    <a href="/quiz/1"><button>Next</button></a>
-{% else %}
-    <a href="/learn/{{lesson.next_lesson}}"><button>Next</button></a>
-{%endif%}
+        <div class = "col">
+            {% if lesson.next_lesson == "end" %}
+                <a class="btn btn-primary btn-lg btn-block" href="/quiz/1" role="button" id = "btn-next-is-quiz">Next</a>
+            {% else %}
+                <a class="btn btn-primary btn-lg btn-block" href="/learn/{{lesson.next_lesson}}" role="button"id = "btn-next">Next</a>
+            {%endif%}
+        </div>
+    </div>
+</div>
+
 
 {% endblock %}
-

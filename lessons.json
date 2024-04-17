@@ -2,7 +2,7 @@
     "1":{
          "lesson_id": 1,
          "title": "Welcome to this tutorial on how to replace your bike tires.",
-         "body":"Although intimidating at first, learning to repair your tires is a critical part of bike maintenance. \nHere, we will identify common problems, learn how to solve them, then provide common tips to prevent these problems.",
+         "body":"Although intimidating at first, learning to repair your tires is a critical part of bike maintenance. \\n Here, we will identify common problems, learn how to solve them, then provide common tips to prevent these problems.",
          "prev_lesson":"0",
          "next_lesson":"2"
      },
@@ -21,8 +21,9 @@
      },
       "3":{
          "lesson_id": 3,
-         "title": "Self Check: Please check all the boxes next to the concepts you understand.",
-         "body":"-Bike Tires typically hold between 50-70 PSI.\n-Bike tires can be susceptible to ruptures based on environments.\n-Bike tires have a clear audible noise to indicate rupture or maintenance.\n-Bike tools are critical to repair bike tires",
+         "title": "Skill Check",
+         "body": "Please check all the boxes next to the concepts you understand.",
+         "self_check":"-Bike Tires typically hold between 50-70 PSI.\\n -Bike tires can be susceptible to ruptures based on environments.\\n -Bike tires have a clear audible noise to indicate rupture or maintenance.\\n -Bike tools are critical to repair bike tires",
          "prev_lesson":"2",
          "next_lesson":"4"
      },
@@ -41,16 +42,16 @@
     "5":{
         "lesson_id": 5,
         "title": "Great, you are ready to move on to listening to samples",
-        "body":"For this exercise, it is best that you are in a quiet room or able to hear the samples without interruptions.\n This is a critical portion to identify the issues of the bike tires",
+        "body":"For this exercise, it is best that you are in a quiet room or able to hear the samples without interruptions.\\n  This is a critical portion to identify the issues of the bike tires",
         "prev_lesson":"4",
         "next_lesson":"6"
     },
     "6":{
         "lesson_id": 6,
         "title": "Sound Check",
-        "body": "In order to understand if you are able to repair your bike tire, it is necessary to understand what exactly is wrong with your tire.\n  Not all tire problems are created equally",
+        "body": "In order to understand if you are able to repair your bike tire, it is necessary to understand what exactly is wrong with your tire.\\n   Not all tire problems are created equally",
         "audio_clips": [
-            {"sound_url": "/static/audio_clips/silenthiss.mp3", "text": "Near Silent Hiss\n Indication of small leak"},
+            {"sound_url": "/static/audio_clips/silenthiss.mp3", "text": "Near Silent Hiss\\n  Indication of small leak"},
             {"sound_url": "/static/audio_clips/creaking-bearing.mp3", "text": "Creaking Noise Indication of Bearing, Not a Tire Problem"},
             {"sound_url":"/static/audio_clips/pophiss.wav", "text":"Hiss Followed by Pop Indication of major rupture"}
         ],
@@ -73,7 +74,7 @@
     "8":{
         "lesson_id": 8,
         "title": "Tool Identification",
-        "body":"These are all the necessary tools for repair. Click each image to learn more",
+        "body": "These are all the necessary tools for repair. Click each image to learn more",
         "flashcards": [
             {"title": "CO2 Canister","image_url": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcThYlKnJQRYtScwGjk6zL0nscLGF-9kMEmWY-GEdYiQ3A6moUII", "text": "A C02 Canister holds air. HIGHLY PRESSURIZED"},
             {"title": "CO2 Nozzle","image_url": "https://i.ebayimg.com/thumbs/images/g/lpkAAOSwQ5VlNpxH/s-l225.jpg", "text": "C02 nozzle can be screwed on top to safely release pressure."},
@@ -86,7 +87,7 @@
     "9":{
         "lesson_id": 9,
         "title": "Combining Tools Drag and Drop",
-        "body":"Drag tools together to figure what works together to repair the tire",
+        "body": "Drag tools together to figure what works together to repair the tire",
         "tools": [
             {"image_url": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcThYlKnJQRYtScwGjk6zL0nscLGF-9kMEmWY-GEdYiQ3A6moUII", "name": "A C02 Canister"},
             {"image_url": "https://i.ebayimg.com/thumbs/images/g/lpkAAOSwQ5VlNpxH/s-l225.jpg", "name": "C02 nozzle"},
@@ -98,8 +99,9 @@
     },
     "10":{
         "lesson_id": 10,
-        "title": "Self Check: Please check all the boxes next to the concepts you understand.",
-        "body":"-Tire plugs can not be inserted on its own\n- C02 has a risk of exploding if used improperly\n-C02 is disposable\n-Bike tools are critical to repair bike tires",
+        "title": "Self Check",
+        "body":"Please check all the boxes next to the concepts you understand.",
+        "self_check":"-Tire plugs can not be inserted on its own\\n - C02 has a risk of exploding if used improperly\\n -C02 is disposable\\n -Bike tools are critical to repair bike tires",
         "prev_lesson":"9",
         "next_lesson":"11"
     },

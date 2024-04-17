@@ -4,14 +4,44 @@
     flex-direction: column;
     align-items: center;
     justify-items: center;
-    margin-bottom: 3rem;
-    margin-top: 3rem;
+    text-align: center;
 }
 
 .standard
 {
     width: 6rem;
 }
+
+.padded
+{
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+	padding-top: 10px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+}
+
+.body
+{
+    font-size: 18px;
+}
+
+.grey
+{
+    background-color: rgb(225, 225, 225);
+}
+
+.padd-vert
+{
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.no-padd>*
+{
+    padding: 0 0 0 0;
+}
+
 .answer
 {
     box-sizing: border-box;
