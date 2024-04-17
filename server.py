@@ -53,6 +53,7 @@ def learn(lesson_id):
     lessons_list = session.setdefault('lessons', [])
     # Update the timestamp for the existing lesson_id or append a new entry if it doesn't exist
     lesson_index = next((i for i, lesson in enumerate(lessons_list) if lesson['lesson_id'] == lesson_id), None)
+
     if lesson_index is not None:
         # Update the timestamp if the lesson_id already exists
         lessons_list[lesson_index]['timestamp'] = current_time
@@ -78,6 +79,7 @@ def learn(lesson_id):
     
     # Render the learn.html template for GET requests
     lesson = lessons[lesson_id]
+    print("lesson: ", lesson)
     return render_template('learn.html', lesson=lesson)
 
 @app.route('/quiz/<quiz_id>')
