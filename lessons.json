@@ -22,9 +22,10 @@
 	},
 	"3":{
 		"lesson_id": 3,
-		"title": "Skill Check",
-		"body": "Please check all the boxes next to the concepts you understand.",
-		"self_check":"Bike Tires typically hold between 50-70 PSI.\\n Bike tires can be susceptible to ruptures based on environments.\\n Bike tires have a clear audible noise to indicate rupture or maintenance.\\n Bike tools are critical to repair bike tires",
+		"title": "Self Checkpoint",
+		"body": "Which of the following statements about bike tires are TRUE? (Check all that apply)",
+		"self_check":"Bike Tires typically hold between 50-70 PSI.\\n Bike tires can be susceptible to ruptures based on environments.\\n Bike tires automatically repair punctures over time.\\n Bike tools are critical to repair bike tires",
+		"correct_answers":"1,2,4",
 		"prev_lesson":"2",
 		"next_lesson":"4"
 	},
@@ -100,9 +101,10 @@
 	},
 	"10":{
 		"lesson_id": 10,
-		"title": "Self Check",
-		"body":"Please check all the boxes next to the concepts you understand.",
-		"self_check":"-Tire plugs can not be inserted on its own\\n - C02 has a risk of exploding if used improperly\\n -C02 is disposable\\n -Bike tools are critical to repair bike tires",
+		"title": "Self Checkpoint",
+		"body":"Which of the following statements are TRUE? (Check all that apply)",
+		"self_check":"Tire plugs can not be inserted on its own\\nC02 has a risk of exploding if used improperly\\nC02 is reusable\\nBike tools are critical to repair bike tires",
+		"correct_answers":"1,2,4",
 		"prev_lesson":"9",
 		"next_lesson":"11"
 	},

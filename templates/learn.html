@@ -3,6 +3,7 @@
 {% block content %}
 <script>    
     var lesson = JSON.parse('{{ lesson | tojson | safe}}');
+    var selected = JSON.parse('{{ selected_sentences | tojson | safe}}');
 </script>
 
 <script type="text/javascript" src="{{ url_for('static', filename = 'learn.js') }}"></script>

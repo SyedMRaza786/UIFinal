@@ -239,6 +239,17 @@
     text-align: center; /* Center-align title */
 }
 
+.form-div{
+    padding-top: 20px;
+}
 
-  
+.incorrect-answer{
+    background-color: lightcoral;
+}
+
+.icon{
+    height: 25px;
+    width: 25px;
+    margin-right: 30px;
+}
   
