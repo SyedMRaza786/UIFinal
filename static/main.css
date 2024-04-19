@@ -210,20 +210,20 @@
 }
 
 .img-div {
-    width: 300px; /* Adjust as needed */
+    width: 250px; /* Adjust as needed */
     border: 1px solid #3f3c3c;
     border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 20px; /* Adjust spacing between img-divs */
     text-align: center; /* Center-align content */
     padding-top: 20px;
     margin-top: 30px;
+    margin-right: 20px;
 }
 
 .img-div-img {
     padding-top: 10px;
-    width: 80%;
-    height: auto;
+    width: 200px; /* Adjust width as needed */
+    height: 150px; /* Adjust height as needed */
     display: block; /* To center the image */
     margin: 0 auto; /* To center the image horizontally */
 }
