@@ -117,6 +117,10 @@ def quiz_answer(quiz_id):
 
     return jsonify({'answer': question['answer']})
 
+@app.route('/quiz/start')
+def quiz_start():
+    return render_template('quiz_start.html') 
+
 @app.route('/quiz/results')
 def quiz_results():
     quiz_answers = session.setdefault('quiz_answers', {})

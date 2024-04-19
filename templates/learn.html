@@ -2,7 +2,7 @@
 
 {% block content %}
 <script>    
-    var lesson = {{ lesson | tojson | safe}};
+    var lesson = JSON.parse('{{ lesson | tojson | safe}}');
 </script>
 
 <script type="text/javascript" src="{{ url_for('static', filename = 'learn.js') }}"></script>
@@ -109,7 +109,7 @@
 
         <div class = "col">
             {% if lesson.next_lesson == "end" %}
-                <a class="btn btn-primary btn-lg btn-block" href="/quiz/1" role="button" id = "btn-next-is-quiz">Next</a>
+                <a class="btn btn-primary btn-lg btn-block" href="/quiz/start" role="button" id = "btn-next-is-quiz">Next</a>
             {% else %}
                 <a class="btn btn-primary btn-lg btn-block" href="/learn/{{lesson.next_lesson}}" role="button"id = "btn-next">Next</a>
             {%endif%}
