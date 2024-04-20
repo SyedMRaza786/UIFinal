@@ -216,8 +216,9 @@
     overflow: hidden;
     text-align: center; /* Center-align content */
     padding-top: 20px;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-right: 20px;
+    background-color: rgba(236, 233, 233, 0.454);
 }
 
 .img-div-img {
@@ -258,4 +259,12 @@
     margin-top: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.custom-link{
+    text-decoration: none;
+    color: black
+}
+.pass-fail-img{
+    height: 100px;
+    width: 100px;
 }
