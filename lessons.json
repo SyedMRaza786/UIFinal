@@ -88,13 +88,14 @@
 	},
 	"9":{
 		"lesson_id": 9,
-		"title": "Combining Tools Drag and Drop",
-		"body": "Drag tools together to figure what works together to repair the tire",
+		"title": "Bike Tire Repair Simulation",
+		"body": "(1) Combine tools to find the right repair kit. (2) Drag tool pairs to the bike to fix the tire.",
+		"image":"https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/82614c38823695.5770ea557a3a8.gif",
 		"tools": [
-			{"id":"1", "match_id":"3", "feedback":"Correct, attach the Nozzle onto the Canister and fill the tire", "image_url": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcThYlKnJQRYtScwGjk6zL0nscLGF-9kMEmWY-GEdYiQ3A6moUII", "name": "A C02 Canister"},
-            {"id":"2", "match_id":"4", "feedback":"Correct, attach the plug to the insert tool and drag onto the bike", "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaXnPjBA9--N0I-zRwFEAon6RsW2KM5SDCzQ&s", "name": "Tire Plug tool"},
-			{"id":"3", "match_id":"1",  "feedback":"Correct, attach the Nozzle onto the Canister and fill the tire", "image_url": "https://i.ebayimg.com/thumbs/images/g/lpkAAOSwQ5VlNpxH/s-l225.jpg", "name": "C02 nozzle"},
-			{"id":"4", "match_id":"2", "feedback":"Correct, attach the plug to the insert tool and drag onto the bike", "image_url":"https://m.media-amazon.com/images/I/81YMYONqKPL._AC_UF894,1000_QL80_.jpg", "name": "Tire plugs"}
+			{"id":"1", "match_id":"3", "combined_img":"https://media.dcrainmaker.com/images/2008/08/how-to-use-co2-for-cycling-a-beginners-guide-15.jpg", "feedback":"Correct, attach the Nozzle onto the Canister and fill the tire", "image_url": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcThYlKnJQRYtScwGjk6zL0nscLGF-9kMEmWY-GEdYiQ3A6moUII", "name": "A C02 Canister"},
+            {"id":"2", "match_id":"4", "combined_img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6fLUZHlS-QhJFg9g8YBNtLd6XNn_epYKBqw&s", "feedback":"Correct, attach the plug to the insert tool and drag onto the bike", "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaXnPjBA9--N0I-zRwFEAon6RsW2KM5SDCzQ&s", "name": "Tire Plug tool"},
+			{"id":"3", "match_id":"1", "combined_img":"https://media.dcrainmaker.com/images/2008/08/how-to-use-co2-for-cycling-a-beginners-guide-15.jpg", "feedback":"Correct, attach the Nozzle onto the Canister and fill the tire", "image_url": "https://i.ebayimg.com/thumbs/images/g/lpkAAOSwQ5VlNpxH/s-l225.jpg", "name": "C02 nozzle"},
+			{"id":"4", "match_id":"2", "combined_img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6fLUZHlS-QhJFg9g8YBNtLd6XNn_epYKBqw&s", "feedback":"Correct, attach the plug to the insert tool and drag onto the bike", "image_url":"https://m.media-amazon.com/images/I/81YMYONqKPL._AC_UF894,1000_QL80_.jpg", "name": "Tire plugs"}
 		],
 		"prev_lesson":"8",
 		"next_lesson":"10"
@@ -106,21 +107,8 @@
 		"self_check":"Tire plugs can not be inserted on its own\\nC02 has a risk of exploding if used improperly\\nC02 is reusable\\nBike tools are critical to repair bike tires",
 		"correct_answers":"1,2,4",
 		"prev_lesson":"9",
-		"next_lesson":"11"
-	},
-	"11":{
-		"lesson_id": 11,
-		"title": "3D Model",
-		"body":"Combine tools together then drag them to the bike to repair it",
-		"image":"https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/82614c38823695.5770ea557a3a8.gif",
-		"tools": [
-			{"image_url": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcThYlKnJQRYtScwGjk6zL0nscLGF-9kMEmWY-GEdYiQ3A6moUII", "name": "A C02 Canister"},
-			{"image_url": "https://i.ebayimg.com/thumbs/images/g/lpkAAOSwQ5VlNpxH/s-l225.jpg", "name": "C02 nozzle"},
-			{"image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaXnPjBA9--N0I-zRwFEAon6RsW2KM5SDCzQ&s", "name": "Tire Plug tool"},
-			{"image_url":"https://m.media-amazon.com/images/I/81YMYONqKPL._AC_UF894,1000_QL80_.jpg", "name": "Tire plugs"}
-		],
-		"prev_lesson":"10",
 		"next_lesson":"end"
 	}
+
 	
  }

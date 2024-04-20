@@ -42,12 +42,23 @@
 
 
 {% if lesson.image %}
-    <div class="row justify-content-center">
-        <div class="col-auto">
-          <!-- Your centered content goes here -->
-          <img class="main-img" src="{{ lesson.image }}" alt="main image">
+    <div class="row">
+        <div class="col-4">
+            <div id="droppable-div">
+                <img class="main-img" src="{{ lesson.image }}" alt="main image">
+            </div>
         </div>
-              
+        <div class="col-8">
+            <div class="row padded">
+                {% for tool in lesson.tools %}
+                  <div class="col-md-6 col-lg-3">
+                    <div class="draggable-container">
+                      <img data-tool-id="{{ tool.id }}" data-match="{{ tool.match_id }}" data-feedback="{{tool.feedback}}" class="tool-img" src="{{ tool.image_url }}" alt="Tool Image">
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+        </div>   
     </div>
     
 {%endif%}
@@ -83,17 +94,6 @@
 {%endif%}
 
 
-<div class="container">
-    <div class="row">
-      {% for tool in lesson.tools %}
-        <div class="col-md-6 col-lg-3">
-          <div class="draggable-container">
-            <img data-tool-id="{{ tool.id }}" data-match="{{ tool.match_id }}" data-feedback="{{tool.feedback}}" class="tool-img" src="{{ tool.image_url }}" alt="Tool Image">
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
 
 <br>
 <br>
