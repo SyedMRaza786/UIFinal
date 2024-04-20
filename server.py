@@ -151,12 +151,9 @@ def quiz_answer(quiz_id):
 
 @app.route('/quiz/start')
 def quiz_start():
+    session.pop('quiz_answers', None)
     return render_template('quiz_start.html') 
 
-@app.route('/quiz/retake', methods=['GET'])
-def quiz_retake():
-     session.pop('quiz_answers', None)
-     return render_template('quiz_start.html') 
 
 @app.route('/quiz/results')
 def quiz_results():
