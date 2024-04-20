@@ -34,6 +34,7 @@ function checkAnswers() {
         if (!validAnswer.classList.contains('selected-answer')) {
             curAnswer.classList.add('invalid-answer');
         }
+        document.getElementById("checkButton").disabled = true;
     })
     .catch(error => {
         console.error('Error:', error);

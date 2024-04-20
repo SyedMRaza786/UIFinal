@@ -117,7 +117,19 @@ def learn(lesson_id):
 @app.route('/quiz/<quiz_id>')
 def quiz(quiz_id):
     question = quiz_questions[quiz_id]
-    return render_template('quiz.html', question = question) 
+    # Get the user's quiz answers from the session
+    quiz_answers = session.get('quiz_answers', {})
+    
+    # Check if the user has answered the specific question
+    answered_question = bool(quiz_answers.get(quiz_id))
+    user_answer = None  # Default value if quiz_answers.get(quiz_id) returns None
+    quiz_entry = quiz_answers.get(quiz_id)
+    if quiz_entry is not None:
+        user_answer = quiz_entry.get('selected_answer')
+
+    correct_answer = True if user_answer is not None and int(user_answer) == int(question['answer']) else False
+
+    return render_template('quiz.html', question = question, answered_question=answered_question, user_answer=user_answer, correct_answer=correct_answer) 
 
 @app.route('/quiz/<quiz_id>', methods=['POST'])
 def quiz_answer(quiz_id):
@@ -140,6 +152,11 @@ def quiz_answer(quiz_id):
 @app.route('/quiz/start')
 def quiz_start():
     return render_template('quiz_start.html') 
+
+@app.route('/quiz/retake', methods=['GET'])
+def quiz_retake():
+     session.pop('quiz_answers', None)
+     return render_template('quiz_start.html') 
 
 @app.route('/quiz/results')
 def quiz_results():
