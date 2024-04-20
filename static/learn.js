@@ -202,8 +202,8 @@ $('.draggable-container').droppable({
 	  if (toolId === targetMatch) {
 
 		   var newContainerId = "combined" + toolId;
-
-		   var newContainer = $('<div id="' + newContainerId + '" class="draggable-container combined"></div>');
+		   var comboFeedback = draggedImage.data('combo-feedback');
+		   var newContainer = $('<div id="' + newContainerId + '" class="draggable-container combined" data-feedback="'+comboFeedback+'"></div>');
 		   $(this).parent().append(newContainer);
 		   newContainer.draggable({
 			revert: 'invalid', // Snap back if not dropped on valid target
@@ -257,8 +257,15 @@ $('.draggable-container').droppable({
   $('#droppable-div').droppable({
     accept: '.combined',
     drop: function(event, ui) {
+
         // Prevent the dropped image from returning back
         ui.draggable.draggable('option', 'revert', false);
+		ui.draggable.draggable("destroy");
+
+		var draggedImage = ui.draggable;
+		var feedbackMessage =  draggedImage.data('feedback');
+		
+		$(this).append('<div class="feedback">' + feedbackMessage + '</div>');
     }
 });
 

@@ -53,7 +53,7 @@
                 {% for tool in lesson.tools %}
                   <div class="col-md-6 col-lg-3">
                     <div class="draggable-container">
-                      <img data-tool-id="{{ tool.id }}" data-match="{{ tool.match_id }}" data-feedback="{{tool.feedback}}" class="tool-img" src="{{ tool.image_url }}" alt="Tool Image">
+                      <img data-tool-id="{{ tool.id }}" data-match="{{ tool.match_id }}" data-feedback="{{tool.feedback}}" data-combo-feedback="{{tool.combo_feedback}}" class="tool-img" src="{{ tool.image_url }}" alt="Tool Image">
                     </div>
                   </div>
                 {% endfor %}
