@@ -2,11 +2,15 @@
     <div class="form-check body">
         <input type="hidden" name="lesson_id" value="{{ lesson.lesson_id }}">
         {% for sentence in lesson.self_check.split('\\n') %}
-            <br>
 
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="{{ sentence.strip() }}" id="{{ sentence.strip() }}">
-                <label class="form-check-label" for="{{ sentence.strip() }}">
+            <div class="form-div">
+                {% if results[loop.index | string] == 'Correct' %}
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/128/14090/14090371.png" alt="Correct">
+                {% elif results[loop.index | string] == 'Incorrect' %}
+                    <img class="icon" src="https://i.pinimg.com/736x/b5/e4/ed/b5e4edf4cb4ee7535e7f7b1bf969fa63.jpg" alt="Incorrect">
+                {%endif%}
+                <input class="form-check-input" name="sentence" type="checkbox" value="{{ loop.index }}" id="{{ loop.index }}" {% if loop.index|string in selected_sentences %} checked {% endif %}>
+                <label  class="form-check-label" for="{{ sentence.strip() }}">
                 {{ sentence.strip() }}
                 </label>
             </div>
@@ -14,8 +18,8 @@
         
     </div>
 
-    <br>
-    <br>
-
-    <button type="button submit" class = "btn btn-primary">Submit</button>
+    <div class="form-div">
+        <button type="button submit" class = "btn btn-primary">Submit</button>
+    </div>
+   
 </form>

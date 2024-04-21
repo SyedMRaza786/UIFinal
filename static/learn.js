@@ -201,21 +201,51 @@ $('.draggable-container').droppable({
 	  // If the tool ID matches the match ID of the droppable container, combine the items
 	  if (toolId === targetMatch) {
 
-		 // Add class 'success-match' to the droppable container
-		 $(this).addClass('success-match');
+		   var newContainerId = "combined" + toolId;
+		   var comboFeedback = draggedImage.data('combo-feedback');
+		   var newContainer = $('<div id="' + newContainerId + '" class="draggable-container combined" data-feedback="'+comboFeedback+'"></div>');
+		   $(this).parent().append(newContainer);
+		   newContainer.draggable({
+			revert: 'invalid', // Snap back if not dropped on valid target
+			start: function(event, ui) {
+			$(this).addClass('dragging'); // Add dragging class when dragging starts
+			$(this).css('opacity', '0.5'); // Reduce opacity to indicate dragging
+			},
+			stop: function(event, ui) {
+			$(this).removeClass('dragging'); // Remove dragging class when dragging stops
+			$(this).css('opacity', '1'); // Restore original opacity
+			}
+		});
+	
+			// Iterate over the tools array to find the matching tool
+			var id = parseInt(toolId);
+			var combinedImg = null;
+			for (var i = 0; i < lesson.tools.length; i++) {
+				if (parseInt(lesson.tools[i].id)=== id) {
+					// Found the matching tool, get the combined_img
+					combinedImg = lesson.tools[i].combined_img;
+					break; // Exit the loop since we found the matching tool
+				}
+			}
 
-		 // Reset the revert option to false
-		 ui.draggable.draggable('option', 'revert', false);
+			// Create a new image element for the combined image
+			var combinedImage = $('<img class="tool-img" src="' + combinedImg + '">');
+	
+			$('#' + newContainerId).append(combinedImage);
+			
 
 		  // Get the feedback message from the data-feedback attribute of the dragged image
 		  var feedbackMessage = draggedImage.data('feedback');
 
+		  $(this).find('img').remove();
+		  draggedImage.remove();
+
 		  // Add feedback message if available
 		  if (feedbackMessage) {
-			$(this).append('<p class="feedback">' + feedbackMessage + '</p>');
+			$(this).append('<div class="feedback">' + feedbackMessage + '</div>');
 		  } else {
 			// If data-feedback attribute is not available, use default message
-			$(this).append('<p class="feedback">Items combined properly!</p>');
+			$(this).append('<div class="feedback">Items combined properly!</div>');
 		  }
 	  } else {
 		// If the match is not valid, revert the dragged image to its original position
@@ -223,6 +253,22 @@ $('.draggable-container').droppable({
 	  }
 	}
   });
+
+  $('#droppable-div').droppable({
+    accept: '.combined',
+    drop: function(event, ui) {
+
+        // Prevent the dropped image from returning back
+        ui.draggable.draggable('option', 'revert', false);
+		ui.draggable.draggable("destroy");
+
+		var draggedImage = ui.draggable;
+		var feedbackMessage =  draggedImage.data('feedback');
+		
+		$(this).append('<div class="feedback">' + feedbackMessage + '</div>');
+    }
+});
+
   
   
   

@@ -22,7 +22,7 @@ quiz_questions = {
     "2":{
         "quiz_id": 2,
         "question": "What do you attach to a C02 Canister?",
-        "options": ["You attach a hose", "You attach a cap", "You attach a nozzle", "You dont need to attach anything"],
+        "options": ["You attach a hose", "You attach a cap", "You attach a nozzle", "You don't need to attach anything"],
         "answer": 1,
     },
     "3": {
@@ -87,17 +87,49 @@ def learn(lesson_id):
                 'selected_sentences': selected_sentences
             }
         
-        # Redirect back to the same page after processing the form
-        return redirect(url_for('learn', lesson_id=lesson_id))
+       
+        lesson = lessons[lesson_id]
+        # Fetch the correct answers for the lesson
+        correct_answers = lessons[lesson_id]['correct_answers'].split(',')
+            # Generate results based on selected and correct answers
+        results = {}
+        
+        # Loop through correct answers and mark them as "Correct"
+        for idx in correct_answers:
+            results[idx] = "Correct"
+
+        # Loop through selected answers and mark them as "Correct" or "Incorrect"
+        for idx in selected_sentences:
+            results[idx] = "Incorrect" if idx not in correct_answers else "Correct"
+
+        # Add empty strings for answers that are neither selected nor correct
+        for idx in map(str, range(1, len(correct_answers) + 1)):
+            results.setdefault(idx, "")
+
+
+
+        return render_template('learn.html', lesson=lesson, selected_sentences=selected_sentences, results=results)
     
     # Render the learn.html template for GET requests
     lesson = lessons[lesson_id]
-    return render_template('learn.html', lesson=lesson)
+    return render_template('learn.html', lesson=lesson, selected_sentences=[], results=[])
 
 @app.route('/quiz/<quiz_id>')
 def quiz(quiz_id):
     question = quiz_questions[quiz_id]
-    return render_template('quiz.html', question = question) 
+    # Get the user's quiz answers from the session
+    quiz_answers = session.get('quiz_answers', {})
+    
+    # Check if the user has answered the specific question
+    answered_question = bool(quiz_answers.get(quiz_id))
+    user_answer = None  # Default value if quiz_answers.get(quiz_id) returns None
+    quiz_entry = quiz_answers.get(quiz_id)
+    if quiz_entry is not None:
+        user_answer = quiz_entry.get('selected_answer')
+
+    correct_answer = True if user_answer is not None and int(user_answer) == int(question['answer']) else False
+
+    return render_template('quiz.html', question = question, answered_question=answered_question, user_answer=user_answer, correct_answer=correct_answer) 
 
 @app.route('/quiz/<quiz_id>', methods=['POST'])
 def quiz_answer(quiz_id):
@@ -116,6 +148,12 @@ def quiz_answer(quiz_id):
     session['quiz_answers'] = quiz_answers
 
     return jsonify({'answer': question['answer']})
+
+@app.route('/quiz/start')
+def quiz_start():
+    session.pop('quiz_answers', None)
+    return render_template('quiz_start.html') 
+
 
 @app.route('/quiz/results')
 def quiz_results():

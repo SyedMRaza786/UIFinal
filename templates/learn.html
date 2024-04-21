@@ -2,7 +2,8 @@
 
 {% block content %}
 <script>    
-    var lesson = {{ lesson | tojson | safe}};
+    var lesson = JSON.parse('{{ lesson | tojson | safe}}');
+    var selected = JSON.parse('{{ selected_sentences | tojson | safe}}');
 </script>
 
 <script type="text/javascript" src="{{ url_for('static', filename = 'learn.js') }}"></script>
@@ -41,12 +42,23 @@
 
 
 {% if lesson.image %}
-    <div class="row justify-content-center">
-        <div class="col-auto">
-          <!-- Your centered content goes here -->
-          <img class="main-img" src="{{ lesson.image }}" alt="main image">
+    <div class="row">
+        <div class="col-4">
+            <div id="droppable-div">
+                <img class="main-img" src="{{ lesson.image }}" alt="main image">
+            </div>
         </div>
-              
+        <div class="col-8">
+            <div class="row padded">
+                {% for tool in lesson.tools %}
+                  <div class="col-md-6 col-lg-3">
+                    <div class="draggable-container">
+                      <img data-tool-id="{{ tool.id }}" data-match="{{ tool.match_id }}" data-feedback="{{tool.feedback}}" data-combo-feedback="{{tool.combo_feedback}}" class="tool-img" src="{{ tool.image_url }}" alt="Tool Image">
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+        </div>   
     </div>
     
 {%endif%}
@@ -82,17 +94,6 @@
 {%endif%}
 
 
-<div class="container">
-    <div class="row">
-      {% for tool in lesson.tools %}
-        <div class="col-md-6 col-lg-3">
-          <div class="draggable-container">
-            <img data-tool-id="{{ tool.id }}" data-match="{{ tool.match_id }}" data-feedback="{{tool.feedback}}" class="tool-img" src="{{ tool.image_url }}" alt="Tool Image">
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
 
 <br>
 <br>
@@ -109,7 +110,7 @@
 
         <div class = "col">
             {% if lesson.next_lesson == "end" %}
-                <a class="btn btn-primary btn-lg btn-block" href="/quiz/1" role="button" id = "btn-next-is-quiz">Next</a>
+                <a class="btn btn-primary btn-lg btn-block" href="/quiz/start" role="button" id = "btn-next-is-quiz">Next</a>
             {% else %}
                 <a class="btn btn-primary btn-lg btn-block" href="/learn/{{lesson.next_lesson}}" role="button"id = "btn-next">Next</a>
             {%endif%}
