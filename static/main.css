@@ -56,6 +56,22 @@ body
     font-size: 18px;
 }
 
+.baseColor{
+    background-color: #9fc5e8ff;
+}
+
+.accentColor{
+    background-color: #4285f4ff;
+}
+
+.darkBlue{
+    background-color: #012169;
+}
+
+.textWhite>a{
+    color: white
+}
+
 .grey
 {
     background-color: rgb(225, 225, 225);
