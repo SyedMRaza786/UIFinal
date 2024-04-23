@@ -93,9 +93,9 @@ body
 
 html * {
     font-family: 
-        Garamond,
+        /* Garamond, */
         Baskerville,
-        Baskerville Old Face,
+        /* Baskerville Old Face, */
         Hoefler Text,
         Times New Roman,
         serif;

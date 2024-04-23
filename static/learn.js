@@ -131,12 +131,12 @@ function checkAudio(){
 
 $.fn.multiline = function(text){
     this.text(text);
-    this.html(this.html().split("\\n").join("<br/>"));
+    this.html(this.html().split("\n").join("<br/>"));
     return this;
 }
 
 function updateTitle(new_title){
-	$("#lesson_title").html(new_title);
+	$("#lesson_title").multiline(new_title);
 }
 
 
