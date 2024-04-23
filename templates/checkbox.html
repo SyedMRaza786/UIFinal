@@ -9,10 +9,12 @@
                 {% elif results[loop.index | string] == 'Incorrect' %}
                     <img class="icon" src="https://i.pinimg.com/736x/b5/e4/ed/b5e4edf4cb4ee7535e7f7b1bf969fa63.jpg" alt="Incorrect">
                 {%endif%}
-                <input class="form-check-input" name="sentence" type="checkbox" value="{{ loop.index }}" id="{{ loop.index }}" {% if loop.index|string in selected_sentences %} checked {% endif %}>
+                
+                <input class="checkbox" name="sentence" type="checkbox" value="{{ loop.index }}" id="{{ loop.index }}" {% if loop.index|string in selected_sentences %} checked {% endif %}>
                 <label  class="form-check-label" for="{{ sentence.strip() }}">
                 {{ sentence.strip() }}
-                </label>
+                </label>  
+                
             </div>
         {% endfor %}
         
