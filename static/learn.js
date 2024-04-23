@@ -1,7 +1,4 @@
 // Lesson JS
-/** TODO:
-* 1. Images
-**/
 
 //Flashcards based off of https://gist.github.com/code-boxx/82671620fc3543ee99fdc390e43b35b5
 
