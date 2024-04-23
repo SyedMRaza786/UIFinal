@@ -7,9 +7,39 @@
     text-align: center;
 }
 
+body
+{
+    background-color: #9FC5E8!important;
+}
+
+.accent
+{
+    background-color: #4285F4!important;
+}
+
+.base
+{
+    background-color: #9FC5E8!important;
+}
+
+.light
+{
+    color: lightgray!important;
+}
+
+.dark
+{
+    color: #58595A!important;
+}
+
+.hide
+{
+    display: none;
+}
+
 .standard
 {
-    width: 6rem;
+    width: 8rem;
 }
 
 .padded
