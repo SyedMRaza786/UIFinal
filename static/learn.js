@@ -6,7 +6,7 @@
 //Flashcards based off of https://gist.github.com/code-boxx/82671620fc3543ee99fdc390e43b35b5
 
 function makeCard (flashcard, idx){
-	var card = "<div class = 'hide bCard padded' id = 'card_"+ idx+"' >"+
+	var card = "<div class = 'bCard padded' id = 'card_"+ idx+"' >"+
 		`<div class="card" onclick="this.classList.toggle('flip')">
 		<span class="front">${flashcard["title"]}</span>
 		<div class="back">
