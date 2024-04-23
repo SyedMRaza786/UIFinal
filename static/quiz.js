@@ -35,6 +35,10 @@ function checkAnswers() {
             curAnswer.classList.add('invalid-answer');
         }
         document.getElementById("checkButton").disabled = true;
+        const nextBtn = document.getElementById("nextButton");
+        if(nextBtn != null) {
+            nextBtn.classList.remove('hide');
+        }
     })
     .catch(error => {
         console.error('Error:', error);

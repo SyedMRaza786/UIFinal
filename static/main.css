@@ -7,6 +7,26 @@
     text-align: center;
 }
 
+body
+{
+    background-color: #9FC5E8!important;
+} 
+
+.light
+{
+    color: lightgray!important;
+}
+
+.dark
+{
+    color: #58595A!important;
+}
+
+.hide
+{
+    display: none;
+}
+
 .standard
 {
     width: 6rem;
@@ -24,6 +44,22 @@
 .body
 {
     font-size: 18px;
+}
+
+.baseColor{
+    background-color: #9fc5e8ff;
+}
+
+.accentColor{
+    background-color: #4285f4ff;
+}
+
+.darkBlue{
+    background-color: #012169;
+}
+
+.textWhite>a{
+    color: white
 }
 
 .grey
@@ -144,7 +180,7 @@
 }
 
 .front {
-    color: #2e189a;
+    color: #012169;
     background: #fff;
 }
 
@@ -157,7 +193,7 @@
 .back
 {
     color: #fff;
-    background: #2e189a;
+    background: #012169;
 }
 
 .back

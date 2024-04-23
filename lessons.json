@@ -23,7 +23,7 @@
 	"3":{
 		"lesson_id": 3,
 		"title": "Self Checkpoint",
-		"body": "Which of the following statements about bike tires are TRUE? (Check all that apply)",
+		"body": "Which of the following statements about bike tires are TRUE?\\n Check all that apply.",
 		"self_check":"Bike Tires typically hold between 50-70 PSI.\\n Bike tires can be susceptible to ruptures based on environments.\\n Bike tires automatically repair punctures over time.\\n Bike tools are critical to repair bike tires",
 		"correct_answers":"1,2,4",
 		"prev_lesson":"2",
@@ -51,7 +51,7 @@
 	"6":{
 		"lesson_id": 6,
 		"title": "Sound Check",
-		"body": "In order to understand if you are able to repair your bike tire, it is necessary to understand what exactly is wrong with your tire.\\n   Not all tire problems are created equally",
+		"body": "In order to understand if you are able to repair your bike tire, it is necessary to understand what exactly is wrong with your tire.\\nNot all tire problems are created equally",
 		"audio_clips": [
 			{"sound_url": "/static/audio_clips/silenthiss.mp3", "text": "Near Silent Hiss", "answer": "Indication of small leak"},
 			{"sound_url": "/static/audio_clips/creaking-bearing.mp3", "text": "Creaking Noise", "answer": "Indication of Bearing, Not a Tire Problem"},
@@ -103,7 +103,7 @@
 	"10":{
 		"lesson_id": 10,
 		"title": "Self Checkpoint",
-		"body":"Which of the following statements are TRUE? (Check all that apply)",
+		"body":"Which of the following statements are TRUE?\\nCheck all that apply\\n",
 		"self_check":"Tire plugs can not be inserted on its own\\nC02 has a risk of exploding if used improperly\\nC02 is reusable\\nBike tools are critical to repair bike tires",
 		"correct_answers":"1,2,4",
 		"prev_lesson":"9",
