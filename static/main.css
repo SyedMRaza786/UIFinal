@@ -12,16 +12,6 @@ body
     background-color: #9FC5E8!important;
 }
 
-.accent
-{
-    background-color: #4285F4!important;
-}
-
-.base
-{
-    background-color: #9FC5E8!important;
-}
-
 .light
 {
     color: lightgray!important;
@@ -97,6 +87,29 @@ body
 
 .padd-vert
 {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+html * {
+    font-family: 
+        Garamond,
+        Baskerville,
+        Baskerville Old Face,
+        Hoefler Text,
+        Times New Roman,
+        serif;
+    font-style: normal;
+    font-variant: normal;
+}
+
+h1{
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
 	padding-top: 3px;
 	padding-bottom: 3px;
 }
@@ -264,7 +277,7 @@ body
     padding-top: 20px;
     margin-top: 50px;
     margin-right: 20px;
-    background-color: rgba(236, 233, 233, 0.454);
+    background-color: #4285f4ff;
 }
 
 .img-div-img {
@@ -280,7 +293,6 @@ body
 }
 
 .img-div-title {
-    font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center; /* Center-align title */
