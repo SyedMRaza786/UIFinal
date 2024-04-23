@@ -7,10 +7,6 @@
     text-align: center;
 }
 
-body
-{
-    background-color: #9FC5E8!important;
-} 
 
 .light
 {
@@ -41,11 +37,6 @@ body
 	padding-bottom: 10px;
 }
 
-.body
-{
-    font-size: 18px;
-}
-
 .baseColor{
     background-color: #9fc5e8ff;
 }
@@ -54,12 +45,20 @@ body
     background-color: #4285f4ff;
 }
 
+.textAccent>*{
+    color: #4285f4ff;
+}
+
 .darkBlue{
     background-color: #012169;
 }
 
-.textWhite>a{
-    color: white
+.textWhite {
+    color: rgb(232, 232, 232)
+}
+
+.textWhite >*{
+    color: rgb(232, 232, 232)
 }
 
 .grey
@@ -180,8 +179,7 @@ body
 }
 
 .front {
-    color: #012169;
-    background: #fff;
+    background: rgb(232, 232, 232);
 }
 
 .sm-img
@@ -192,8 +190,8 @@ body
 
 .back
 {
-    color: #fff;
-    background: #012169;
+    color: rgb(232, 232, 232);
+    background: #4285f4ff;
 }
 
 .back
