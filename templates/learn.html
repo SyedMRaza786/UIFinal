@@ -64,7 +64,7 @@
 {%endif%}
 
 {%if lesson.audio_clips %}
-<div class = "container grey padd-vert">
+<div class = "container padd-vert">
     <div class = "row padd-vert">
         {%if lesson.skill_check %}
         <div class="offset-md-1 col-5" id = "audio-col"></div>
@@ -100,7 +100,7 @@
 <br>
 
 <!-- previous and next buttons -->
-<div class = "fixed-bottom grey padd-vert">
+<div class = "fixed-bottom padd-vert">
     <div class = "row justify-content-between no-padd">
         <div class = "col">
             {% if lesson.prev_lesson | int != 0 %}
