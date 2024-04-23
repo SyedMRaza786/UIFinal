@@ -1,3 +1,13 @@
+html * {
+    font-family: 
+    Garamond, 
+    Baskerville, 
+    Baskerville Old Face, 
+    Hoefler Text, 
+    Times New Roman, 
+    serif;
+}
+
 .center
 {
     display: flex;
@@ -6,7 +16,6 @@
     justify-items: center;
     text-align: center;
 }
-
 
 .light
 {
