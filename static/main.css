@@ -261,7 +261,7 @@ html * {
     padding-top: 20px;
     margin-top: 50px;
     margin-right: 20px;
-    background-color: rgba(236, 233, 233, 0.454);
+    background-color: #4285f4ff;
 }
 
 .img-div-img {
@@ -277,10 +277,10 @@ html * {
 }
 
 .img-div-title {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 24px;
     margin-bottom: 10px;
     text-align: center; /* Center-align title */
+    color: lightgray;
 }
 
 .form-div{
@@ -310,4 +310,10 @@ html * {
 .pass-fail-img{
     height: 100px;
     width: 100px;
+}
+.custom-bold{
+    font-weight: bold;
+}
+#lesson_body{
+    font-size: 20px;
 }
