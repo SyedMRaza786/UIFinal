@@ -79,7 +79,7 @@
 		"body": "These are all the necessary tools for repair. Click each image to learn more",
 		"flashcards": [
 			{"title": "CO2 Canister","image_url": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcThYlKnJQRYtScwGjk6zL0nscLGF-9kMEmWY-GEdYiQ3A6moUII", "text": "A C02 Canister holds air. HIGHLY PRESSURIZED"},
-			{"title": "CO2 Nozzle","image_url": "https://i.ebayimg.com/thumbs/images/g/lpkAAOSwQ5VlNpxH/s-l225.jpg", "text": "C02 nozzle can be screwed on top to safely release pressure."},
+			{"title": "CO2 Nozzle","image_url": "https://m.media-amazon.com/images/I/61f-M2bdpNL._AC_UF1000,1000_QL80_.jpg", "text": "C02 nozzle can be screwed on top to safely release pressure."},
 			{"title": "Tire Plug tool","image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaXnPjBA9--N0I-zRwFEAon6RsW2KM5SDCzQ&s", "text": "A Tire Plug tool can be used to insert the plug to a tire"},
 			{"title": "Tire Plug","image_url":"https://m.media-amazon.com/images/I/81YMYONqKPL._AC_UF894,1000_QL80_.jpg", "text": "Tire plugs are fundamental for blocking air"}
 		],
@@ -94,7 +94,7 @@
 		"tools": [
 			{"id":"1", "match_id":"3", "combined_img":"https://media.dcrainmaker.com/images/2008/08/how-to-use-co2-for-cycling-a-beginners-guide-15.jpg", "feedback":"Correct: Attach the Nozzle to the Canister and use it to fill the bike tire.", "image_url": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcThYlKnJQRYtScwGjk6zL0nscLGF-9kMEmWY-GEdYiQ3A6moUII", "combo_feedback":"Nice! This will help with flat tires.", "name": "A C02 Canister"},
             {"id":"2", "match_id":"4", "combined_img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6fLUZHlS-QhJFg9g8YBNtLd6XNn_epYKBqw&s", "feedback":"Correct: Attach the plug to the insert tool, then drag it onto the bike tire.", "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaXnPjBA9--N0I-zRwFEAon6RsW2KM5SDCzQ&s", "combo_feedback":"Perfect for fixing punctures and leaks in your bike tire.", "name": "Tire Plug tool"},
-			{"id":"3", "match_id":"1", "combined_img":"https://media.dcrainmaker.com/images/2008/08/how-to-use-co2-for-cycling-a-beginners-guide-15.jpg", "feedback":"Correct: Attach the Nozzle to the Canister and use it to fill the bike tire.", "image_url": "https://i.ebayimg.com/thumbs/images/g/lpkAAOSwQ5VlNpxH/s-l225.jpg","combo_feedback":"Nice! This will help with flat tires.", "name": "C02 nozzle"},
+			{"id":"3", "match_id":"1", "combined_img":"https://media.dcrainmaker.com/images/2008/08/how-to-use-co2-for-cycling-a-beginners-guide-15.jpg", "feedback":"Correct: Attach the Nozzle to the Canister and use it to fill the bike tire.", "image_url": "https://m.media-amazon.com/images/I/61f-M2bdpNL._AC_UF1000,1000_QL80_.jpg","combo_feedback":"Nice! This will help with flat tires.", "name": "C02 nozzle"},
 			{"id":"4", "match_id":"2", "combined_img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6fLUZHlS-QhJFg9g8YBNtLd6XNn_epYKBqw&s", "feedback":"Correct: Attach the plug to the insert tool, then drag it onto the bike tire.", "image_url":"https://m.media-amazon.com/images/I/81YMYONqKPL._AC_UF894,1000_QL80_.jpg","combo_feedback":"Perfect for fixing punctures and leaks in your bike tire.", "name": "Tire plugs"}
 		],
 		"prev_lesson":"8",
