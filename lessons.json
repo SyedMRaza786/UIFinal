@@ -34,9 +34,9 @@
 		"title": "Tire Identification",
 		"body":"These are all the parts of a Tire. Click each image to learn more",
 		"flashcards": [
-			{"title": "Outer Tube","image_url": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRmkiLprPUsYr_EnYRgx6CA9-lvOL7w82sSUhsqH7T5_AKiYIRC", "text": "This is the outer tube. This is the main part of the tire focused on repair. This holds the bikes grip."},
-			{"title": "Valve","image_url": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQGEKyYw5UxYTvguW9qSEdl59-e4yuI0G1f0F8TJt53ZFltiVJ6", "text": "This is the valve of the tire, where air is inserted"},
-			{"title": "Inner Tube","image_url":"https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQFgSnldq3vtd1OqUT5UmNEhuH8-g9xIGlk6YjagsGp63hDPgob", "text":"This is the inner tube of the bike that keeps the outer tube intact"}
+			{"title": "Outer Tube","image_url": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRmkiLprPUsYr_EnYRgx6CA9-lvOL7w82sSUhsqH7T5_AKiYIRC", "text": "The outer tire provides protection and support to the inner tube. In the event of punctures or holes, this is the primary focus for repair."},
+			{"title": "Valve","image_url": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQGEKyYw5UxYTvguW9qSEdl59-e4yuI0G1f0F8TJt53ZFltiVJ6", "text": "The valve on serves as the point of entry for inflating or deflating the tire."},
+			{"title": "Inner Tube","image_url":"https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQFgSnldq3vtd1OqUT5UmNEhuH8-g9xIGlk6YjagsGp63hDPgob", "text":"The inner tube is responsible for holding the air pressure that keeps the tire inflated"}
 		],
 		"prev_lesson":"3",
 		"next_lesson":"5"

@@ -67,7 +67,7 @@
     </a>
     {% endif %}
     <button id="checkButton" class="mt-4 btn btn-success" {% if answered_question %}disabled{% endif %} onclick="checkAnswers()">Submit</button>
-    {% if question['quiz_id'] != 6 %}
+    {% if question['quiz_id'] != 8 %}
         <a id="nextButton" {%if not answered_question %}class='hide' {% endif %} href="/quiz/{{question['quiz_id']+1}}">
             <button class="mt-4 standard btn accentColor textWhite">Next</button>
         </a>
