@@ -82,8 +82,8 @@
                 </a>                
             </div>
         {%else%}
-            <div class = "col textWhite">
-                <a href="/quiz/results" class="btn darkBlue btn-lg btn-block textWhite" role ="button">View Results</a>
+            <div {%if not answered_question %}class = "col textWhite hide" {% else %} class = "col textWhite" {% endif %}id = "quiz-next-col">
+                <a href="/quiz/results" class="btn darkBlue btn-lg btn-block textWhite" id="nextButton" role ="button">View Results</a>
             </div>
         {% endif %}
     </div>
