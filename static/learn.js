@@ -89,13 +89,14 @@ function makeAudPractice(){
 		let aud = lesson.audio_clips[i]
 		console.log(aud);
 		var audio_col = 
-			`<div class='row' id = 'desc_row_${i}'>
-					<div id = 'aud_description_${i}'>
-						${aud["text"]}
+			`<div id = 'desc_row_${i}' class = 'border padded'>
+				<div class='row'>
+					<div class = 'col'>
+						<p id = 'aud_description_${i}'>
+							${aud["text"]}
+						</p>
 					</div>
 				</div>
-
-				<br>
 
 				<div class='row' id = 'audio_row_${i}'>
 					<div class = "col">
@@ -110,6 +111,7 @@ function makeAudPractice(){
 						${aud['answer']}
 					</div>
 				</div>
+
 			</div>`;
 		$(audio_col).appendTo("#audio-practice");
 	}
@@ -155,7 +157,7 @@ $(document).ready(function(){
 
 	$( ".droppable" ).droppable({
 		classes: {
-			"ui-droppable-hover": "lightYellow"
+			"ui-droppable-hover": "peachPuff"
 		},
 		drop: function(event, ui) { 
 			$(ui.draggable).draggable('disable');
