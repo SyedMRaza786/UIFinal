@@ -60,23 +60,32 @@
     </div>
     {% endfor %}
 </div>
-<div>
-    {% if question['quiz_id'] != 1 %}
-    <a href="/quiz/{{question['quiz_id']-1}}">
-        <button class="mt-4 standard btn accentColor textWhite">Previous</button>
-    </a>
-    {% endif %}
-    <button id="checkButton" class="mt-4 btn btn-success" {% if answered_question %}disabled{% endif %} onclick="checkAnswers()">Submit</button>
-    {% if question['quiz_id'] != 8 %}
-        <a id="nextButton" {%if not answered_question %}class='hide' {% endif %} href="/quiz/{{question['quiz_id']+1}}">
-            <button class="mt-4 standard btn accentColor textWhite">Next</button>
-        </a>
-    {%else%}
-    <a href="/quiz/results">
-        <button class="mt-4 standard btn accentColor textWhite">View Results</button>
-    </a>
-    {% endif %}
 
+<!-- previous and next buttons -->
+<div class = "fixed-bottom padd-vert">
+    <div class = "row justify-content-between no-padd">
+        
+        {% if question['quiz_id'] != 1 %}
+        <div class="col">
+            <a class="btn btn-secondary btn-lg btn-block" href="/quiz/{{question['quiz_id']-1}}" role = "button">Previous </a>
+        </div>
+        {% endif %}
+
+        <div class="col">
+            <button id="checkButton" class="btn accentColor btn-lg btn-block textWhite" {% if answered_question %}disabled{% endif %} onclick="checkAnswers()">Submit</button>
+        </div>
+
+        <div class = "col textWhite hide" id = "quiz-next-col">
+            {% if question['quiz_id'] != 8 %}
+                <a id="nextButton" {%if not answered_question %}class='hide' {% endif %} href="/quiz/{{question['quiz_id']+1}}">
+                    <button class="btn darkBlue btn-lg btn-block textWhite">Next</button>
+                </a>
+            {%else%}
+                <a href="/quiz/results" class="btn darkBlue btn-lg btn-block textWhite" role ="button">View Results</a>
+            {% endif %}
+        </div>
+
+    </div>
 </div>
 {% endblock %}
 
