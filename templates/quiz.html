@@ -66,25 +66,26 @@
     <div class = "row justify-content-between no-padd">
         
         {% if question['quiz_id'] != 1 %}
-        <div class="col">
-            <a class="btn btn-secondary btn-lg btn-block" href="/quiz/{{question['quiz_id']-1}}" role = "button">Previous </a>
-        </div>
+            <div class="col">
+                <a class="btn btn-secondary btn-lg btn-block" href="/quiz/{{question['quiz_id']-1}}" role = "button">Previous </a>
+            </div>
         {% endif %}
 
         <div class="col">
             <button id="checkButton" class="btn accentColor btn-lg btn-block textWhite" {% if answered_question %}disabled{% endif %} onclick="checkAnswers()">Submit</button>
         </div>
-
-        <div {%if not answered_question %}class = "col textWhite hide" {% else %} class = "col textWhite" {% endif %}id = "quiz-next-col">
-            {% if question['quiz_id'] != 8 %}
+        
+        {% if question['quiz_id'] != 8 %}
+            <div {%if not answered_question %}class = "col textWhite hide" {% else %} class = "col textWhite" {% endif %}id = "quiz-next-col">
                 <a id="nextButton" {%if not answered_question %}class='hide' {% endif %} href="/quiz/{{question['quiz_id']+1}}">
                     <button class="btn darkBlue btn-lg btn-block textWhite">Next</button>
-                </a>
-            {%else%}
+                </a>                
+            </div>
+        {%else%}
+            <div class = "col textWhite">
                 <a href="/quiz/results" class="btn darkBlue btn-lg btn-block textWhite" role ="button">View Results</a>
-            {% endif %}
-        </div>
-
+            </div>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
