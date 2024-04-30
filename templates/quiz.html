@@ -75,7 +75,7 @@
             <button id="checkButton" class="btn accentColor btn-lg btn-block textWhite" {% if answered_question %}disabled{% endif %} onclick="checkAnswers()">Submit</button>
         </div>
 
-        <div class = "col textWhite hide" id = "quiz-next-col">
+        <div {%if not answered_question %}class = "col textWhite hide" {% else %} class = "col textWhite" {% endif %}id = "quiz-next-col">
             {% if question['quiz_id'] != 8 %}
                 <a id="nextButton" {%if not answered_question %}class='hide' {% endif %} href="/quiz/{{question['quiz_id']+1}}">
                     <button class="btn darkBlue btn-lg btn-block textWhite">Next</button>
