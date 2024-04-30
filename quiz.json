@@ -1,7 +1,7 @@
 {
 	"1":{
 		 "quiz_id": 1,
-		 "question": "Which is not a tire Problem?",
+		 "question": "Which is not a tire problem?",
 		 "options": ["Squeaking", "Pop", "Hissing", "Creaking"],
 		 "audio": ["/static/audio_clips/creaking-bearing2.mp3", "/static/audio_clips/pophiss.wav", "/static/audio_clips/silenthiss.mp3", "/static/audio_clips/creaking-bearing.mp3"],
 		 "answer": 0
@@ -10,11 +10,11 @@
 		 "quiz_id": 2,
 		 "question": "What do you attach to a C02 Canister?",
 		 "options": ["You attach a hose", "You attach a cap", "You attach a nozzle", "You don't need to attach anything"],
-		 "answer": 1
+		 "answer": 2
 	 },
 	 "3": {
 		 "quiz_id": 3,
-		 "question": "What comes first in a tire repair",
+		 "question": "What is the initial step in tire repair when dealing with a puncture or a small hole causing air leakage?",
 		 "options": ["Filling up the tire with C02", "Attaching the nozzle on to the C02 Canister", "Attaching the plug to the tire plug tool", "None of the above"],
 		 "answer": 2
 	 },
@@ -35,6 +35,19 @@
 		 "question": "Which of the following items is not essential for repairing a bike tire?",
 		 "options": ["CO2 Canister", "CO2 Nozzle", "Bike Lock", "Tire Plug"],
 		 "answer": 2
-	 }
+	 },
+	 "7": {
+		"quiz_id": 7,
+		"question": "What is the usual PSI range for medium bike tires?",
+		"options": ["20-30 PSI", "50-70 PSI", "80-100 PSI", "30-50 PSI"],
+		"answer": 1
+	},
+	"8": {
+		"quiz_id": 8,
+		"question": "Which repair is typically associated with the inner tube of a bike tire??",
+		"options": ["Patching small punctures with a repair kit", " Applying a tire plug to seal punctures", " Replacing the damaged tire casing", "Reinflating the tire with a CO2 canister"],
+		"answer": 3
+	}
+
  
  }

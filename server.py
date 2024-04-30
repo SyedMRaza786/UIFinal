@@ -55,20 +55,21 @@ def learn(lesson_id):
         correct_answers = lessons[lesson_id]['correct_answers'].split(',')
             # Generate results based on selected and correct answers
         results = {}
-        
-        # Loop through correct answers and mark them as "Correct"
-        for idx in correct_answers:
-            results[idx] = "Correct"
 
         # Loop through selected answers and mark them as "Correct" or "Incorrect"
         for idx in selected_sentences:
-            results[idx] = "Incorrect" if idx not in correct_answers else "Correct"
+            if idx not in correct_answers:
+                results[idx] = "Incorrect" 
+            elif idx in correct_answers:
+                results[idx] = "Correct"
 
-        # Add empty strings for answers that are neither selected nor correct
-        for idx in map(str, range(1, len(correct_answers) + 1)):
-            results.setdefault(idx, "")
+        for idx in correct_answers:
+            if idx not in selected_sentences:
+                results[idx] = "Incorrect"
 
-
+        for idx in range(1,5):
+            if str(idx) not in selected_sentences and str(idx) not in correct_answers:
+                results[str(idx)] = "Correct"
 
         return render_template('learn.html', lesson=lesson, selected_sentences=selected_sentences, results=results)
     
