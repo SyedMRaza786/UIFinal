@@ -2,8 +2,8 @@
 	"1":{
 		 "quiz_id": 1,
 		 "question": "Which is not a tire problem?",
-		 "options": ["Squeaking", "Pop", "Hissing", "Creaking"],
-		 "audio": ["/static/audio_clips/creaking-bearing2.mp3", "/static/audio_clips/pophiss.wav", "/static/audio_clips/silenthiss.mp3", "/static/audio_clips/creaking-bearing.mp3"],
+		 "options": ["Squeaking", "Pop", "Hissing", "Leak"],
+		 "audio": ["/static/audio_clips/creaking-bearing2.mp3", "/static/audio_clips/pophiss.wav", "/static/audio_clips/silenthiss.mp3", "/static/audio_clips/silenthiss.mp3"],
 		 "answer": 0
 	 },
 	 "2":{
