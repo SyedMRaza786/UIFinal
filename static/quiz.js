@@ -38,6 +38,7 @@ function checkAnswers() {
         const nextBtn = document.getElementById("nextButton");
         if(nextBtn != null) {
             nextBtn.classList.remove('hide');
+            document.getElementById('quiz-next-col').classList.remove('hide');
         }
     })
     .catch(error => {
